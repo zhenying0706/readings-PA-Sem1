@@ -4,6 +4,8 @@
 
 This table links each bilingual note, DOI, and local Zotero item key. Categories follow `Independent Study-Sem1`.
 
+配套学习材料：[41篇研究方法与数据处理学习手册（中文版）](METHODS_AND_DATA_GUIDE_CN.md)。
+
 | # | 分类 / Category | Year | Paper | Authors | DOI | Zotero key |
 |---:|---|---:|---|---|---|---|
 | 1 | A. Core review / agenda | 2024 | [Administrative Burden in Citizen-State Interactions: A Systematic Literature Review](notes/A_Core_review_agenda/01-halling-baekgaard-2024.md) | Aske Halling; Martin Baekgaard | [DOI](https://doi.org/10.1093/jopart/muad023) | `JQRVIAQA` |

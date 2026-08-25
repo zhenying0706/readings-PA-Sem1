@@ -7,6 +7,7 @@ This bilingual reading repository supports independent study on public-sector AI
 ## 从哪里开始 | Start here
 
 - [41篇总索引 | Full catalog](CATALOG.md)
+- [41篇研究方法与数据处理学习手册（中文版） | Methods and data guide](METHODS_AND_DATA_GUIDE_CN.md)
 - [逐篇笔记 | Article notes](notes)
 - [分类综述 | Category syntheses](categories)
 - [双语阅读模板 | Bilingual note template](NOTE_TEMPLATE.md)
@@ -34,6 +35,8 @@ This bilingual reading repository supports independent study on public-sector AI
 
 Recommended sequence: **A → B/C/D/E → F/G → I**. Read the category synthesis first, then the article notes, and finally return to the synthesis to formulate cross-paper questions.
 
+方法学习建议先读根目录的[研究方法与数据处理学习手册](METHODS_AND_DATA_GUIDE_CN.md)。手册按方法去重讲解，并用41篇覆盖表标注每种方法对应的论文、数据处理步骤、识别假设、系数解释、机制证据和结论边界。
+
 ## 如何使用每篇笔记 | How to use each note
 
 每篇笔记都区分论文实际做出的证据与可供后续研究的推论。概念论文和综述不会被写成实验；相关性、准实验和随机实验也不会被混为一谈。建议阅读原文时重点核对研究对象、样本、识别策略、测量、机制与外部效度。
@@ -47,4 +50,3 @@ Each note separates demonstrated evidence from inference and future possibilitie
 ## 文件边界 | Repository boundary
 
 仓库不包含受版权保护的论文 PDF、提取文本或本地工作文件。原始论文保留在本地阅读文件夹和 Zotero 中；公开仓库仅包含原创学习笔记、分类综述、索引与模板。
-
