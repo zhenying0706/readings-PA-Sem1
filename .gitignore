@@ -1,0 +1,9 @@
+.DS_Store
+work/
+tmp/
+00_Reading_by_Category/
+*.pdf
+*.txt
+*.json
+*.csv
+
