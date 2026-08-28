@@ -1,0 +1,529 @@
+# 从AI采用到公民—国家互动 | From AI Adoption to Citizen–State Interactions
+
+## 公共部门AI、官僚工作与行政负担的整合性文献综述 | An Integrative Review of Public-Sector AI, Bureaucratic Work, and Administrative Burden
+
+> 导师汇报中英文对照版｜基于 `Independent Study-Sem1` 41篇论文  
+> Bilingual advisor-meeting edition | Based on 41 papers in `Independent Study-Sem1`
+
+> 核心主题：公共部门AI、生成式AI、组织实施、官僚裁量、问责与合法性、行政负担及其分配后果  
+> Core themes: public-sector AI, generative AI, organizational implementation, bureaucratic discretion, accountability and legitimacy, administrative burden, and distributive consequences
+
+## 摘要 | Abstract
+
+**中文**
+
+公共部门人工智能研究正在从“政府是否采用AI”的技术接受问题，转向“AI如何嵌入组织、重构官僚工作并改变公民—国家互动”的制度问题。本文综合41篇公共管理、公共行政与政策研究文献，提出一条贯穿不同研究传统的分析链条：制度环境与公共价值首先界定公共组织采用AI的合法边界；组织能力、数据、人员与人机分工决定技术如何被实施；实施过程不会简单消除官僚裁量，而是将裁量重新分配到数据、模型、系统设计、前线使用和异常处理等环节；这些变化进一步重塑国家—公民界面，并通过学习、遵从和心理成本产生或转移行政负担；负担最终影响服务获得、组织绩效、社会公平、制度信任与治理合法性。现有研究已经较清楚地揭示了组织过程、价值冲突和负担机制，但对任务层真实使用、长期绩效、公民端结果以及多层机制的因果证据仍然不足。未来研究需要把组织授权、任务日志、前线互动和完整服务漏斗连接起来，并同时检验效率、公平、问责、隐私和申诉能力，而不能以采用意愿、技术准确率或政策文本替代公共价值结果。
+
+**English**
+
+Research on artificial intelligence in the public sector is moving beyond the technological-acceptance question of whether governments adopt AI toward an institutional question: how AI becomes embedded in organizations, restructures bureaucratic work, and changes citizen–state interactions. Synthesizing 41 studies in public management, public administration, and public policy, this review develops an analytical chain that connects several research traditions. Institutional environments and public values first define the legitimate boundaries of AI adoption. Organizational capacity, data, personnel, and the division of labor between humans and machines then shape implementation. Implementation does not simply eliminate bureaucratic discretion; it redistributes discretion across data, models, system design, frontline use, and exception handling. These changes reshape the citizen–state interface and may create, reduce, or transfer learning, compliance, and psychological costs. Administrative burdens, in turn, affect service access, organizational performance, social equity, institutional trust, and governance legitimacy. Existing research provides substantial insight into organizational processes, value conflicts, and burden mechanisms, but causal evidence remains limited regarding actual task-level use, long-term performance, citizen outcomes, and multilevel mechanisms. Future research should connect organizational authorization, task logs, frontline interactions, and the full service-delivery funnel. It should also evaluate efficiency, equity, accountability, privacy, and the capacity to appeal rather than treating adoption intentions, technical accuracy, or policy texts as substitutes for public-value outcomes.
+
+## 一、问题意识 | 1. Framing the Problem
+
+### 为什么需要把公共部门AI与行政负担放在同一张图里 | Why Public-Sector AI and Administrative Burden Belong in the Same Framework
+
+**中文**
+
+现有公共部门AI文献经常从技术采用、组织创新、官僚工作、公众接受或算法治理中的某一个环节切入。行政负担文献则主要解释公民为何难以获得公共服务，以及规则和执行如何造成学习、遵从与心理成本。两个研究群体表面上关注不同对象，实际上研究的是同一条实施链的不同位置：公共组织如何把政治目标和公共价值转化为规则、技术与工作流程，以及这些安排最终如何被官僚和公民体验。
+
+**English**
+
+The literature on public-sector AI often begins with one part of the process, such as technology adoption, organizational innovation, bureaucratic work, public acceptance, or algorithmic governance. Research on administrative burden primarily explains why citizens have difficulty accessing public services and how rules and implementation generate learning, compliance, and psychological costs. Although the two literatures appear to study different objects, they examine different positions along the same implementation chain: how public organizations translate political objectives and public values into rules, technologies, and workflows, and how bureaucrats and citizens ultimately experience these arrangements.
+
+**中文**
+
+如果只研究技术采用，容易把“组织购买或允许使用AI”误当作实施成功；如果只研究算法准确率，容易忽略模型输出必须经过组织规则、专业判断和申诉程序才能成为公共行动；如果只研究公民是否愿意使用数字服务，又可能把接受度误当成公平、合法或低负担。行政负担研究补足了这一缺口，因为它迫使研究者观察技术和组织变化怎样进入具体接触过程，并追问谁承担学习、时间、金钱、压力、污名和纠错成本。
+
+**English**
+
+A narrow focus on technology adoption can mistake an organization’s purchase or authorization of AI for successful implementation. A narrow focus on algorithmic accuracy can overlook the organizational rules, professional judgments, and appeal procedures through which model outputs become public action. Likewise, studying only whether citizens are willing to use digital services may conflate acceptance with equity, legitimacy, or low burden. Administrative-burden research helps address this gap by directing attention to the concrete encounters through which technological and organizational changes are experienced. It also asks who bears the costs of learning, time, money, stress, stigma, and error correction.
+
+**中文**
+
+这41篇文献由此可以围绕一个共同问题组织起来：公共部门AI如何在特定制度和组织条件下重新配置官僚裁量与行政成本，并产生何种绩效、分配和合法性后果？这个问题把技术、组织、官僚和公民放在同一分析框架内，也为公共管理学而非单纯信息系统或计算机科学的贡献提供了清晰位置。
+
+**English**
+
+The 41 studies can therefore be organized around a shared question: under particular institutional and organizational conditions, how does public-sector AI reconfigure bureaucratic discretion and administrative costs, and what performance, distributive, and legitimacy consequences follow? This question places technology, organizations, bureaucrats, and citizens within one analytical framework. It also clarifies the distinctive contribution of public management scholarship beyond information systems or computer science alone.
+
+## 二、概念基础 | 2. Conceptual Foundations
+
+### 2.1 行政负担提供公民—国家互动的因果语言 | Administrative Burden Provides a Causal Language for Citizen–State Interactions
+
+**中文**
+
+行政负担通常被区分为学习成本、遵从成本和心理成本。Halling与Baekgaard（2024）的系统综述进一步将其扩展为“国家行动—执行与沟通—主观体验—个体后果—负担容忍—政策反馈”的因果地图。该框架说明，正式规则并不直接等同于公民体验。前线执行、政府沟通、家庭和非营利组织等第三方，以及公民自身资源都会改变同一制度要求的实际影响。
+
+**English**
+
+Administrative burden is commonly divided into learning, compliance, and psychological costs. Halling and Baekgaard’s (2024) systematic review extends this formulation into a causal map linking state action, implementation and communication, subjective experience, individual consequences, burden tolerance, and policy feedback. The framework demonstrates that formal rules do not translate directly into citizen experience. Frontline implementation, government communication, third parties such as families and nonprofit organizations, and citizens’ own resources all condition the effects of the same institutional requirement.
+
+**中文**
+
+Campbell、Pandey与Arnesen（2023）对红带和行政负担的元叙事比较表明，两套文献虽然分别从组织绩效和公民体验出发，但都在研究规则的功能、行为后果、政治来源和分配效应。数字化改革尤其可能在两者之间转移成本：组织内部程序得到自动化，不代表社会总成本下降；原本由公务员完成的信息整理、资格判断或错误纠正可能被转移给公民、家庭或中介机构。
+
+**English**
+
+Campbell, Pandey, and Arnesen’s (2023) metanarrative comparison of red tape and administrative burden shows that, despite beginning from organizational performance and citizen experience respectively, both literatures examine the functions, behavioral consequences, political origins, and distributive effects of rules. Digital reform may be especially likely to shift costs across these domains. Automating internal procedures does not necessarily reduce total social costs; information organization, eligibility assessment, or error correction previously performed by public employees may instead be transferred to citizens, families, or intermediary organizations.
+
+### 2.2 AI实施是组织变化，而不是一次采购 | AI Implementation Is Organizational Change, Not a One-Time Purchase
+
+**中文**
+
+Mergel等人（2023）指出，公共部门AI研究不能停留在采用和伦理原则。AI实施涉及数据供给、技能、预算、工作流程、团队角色、监督和持续学习。Neumann、Guirguis与Steiner（2024）利用TOE框架进一步说明，实施条件随成熟度改变：早期探索依靠先行者和外部伙伴，进入核心业务后需要高层支持、战略一致和内部能力，规模化阶段则面对跨部门抵制、标准化和责任分配。
+
+**English**
+
+Mergel et al. (2023) argue that public-sector AI research must move beyond adoption and statements of ethical principles. Implementation involves data supply, skills, budgets, workflows, team roles, oversight, and continuous learning. Using the technology–organization–environment framework, Neumann, Guirguis, and Steiner (2024) further show that implementation conditions change with organizational maturity. Early exploration often depends on champions and external partners; integration into core operations requires senior leadership, strategic alignment, and internal capacity; and scaling creates challenges involving interdepartmental resistance, standardization, and the allocation of responsibility.
+
+**中文**
+
+Wilson与Broomfield（2023）的边界理论研究揭示，同伴网络可以传递项目经验和实施诀窍，却未必能够建立理解模型原理、偏差和限制所需的技术能力。Maragno等人（2023）的组织设计研究则说明，AI会改变任务分解、任务分配、奖励和信息提供，并形成需要持续训练与监督的人机团队。Park、Oh与Choi（2025）补充了公共组织的政治特性：AI越容易受到外部观察，失败和合法性风险越突出，组织越可能选择低可见度、与现有程序兼容的应用。
+
+**English**
+
+Wilson and Broomfield’s (2023) boundary-theory study shows that peer networks can transmit project experience and implementation know-how without necessarily building the technical capacity required to understand model principles, biases, and limitations. Maragno et al. (2023), drawing on organizational design, show that AI changes task decomposition, task allocation, rewards, and information provision, producing human–machine teams that require continued training and supervision. Park, Oh, and Choi (2025) add the political characteristics of public organizations: when AI applications are highly visible to external audiences, the risks of failure and loss of legitimacy become more salient, making organizations more likely to select low-visibility applications that are compatible with existing procedures.
+
+**中文**
+
+这组研究共同反对“技术装入组织以后自动产生效果”的线性想象。组织能力既影响技术能否运行，也影响错误由谁发现、工作人员是否能质疑输出，以及效率收益会不会以更低的透明、裁量或公平为代价。
+
+**English**
+
+Together, these studies reject a linear account in which technology automatically produces effects once installed in an organization. Organizational capacity affects not only whether a system functions, but also who detects errors, whether employees can challenge outputs, and whether efficiency gains come at the expense of transparency, discretion, or equity.
+
+### 2.3 自动化的公共价值后果具有条件性 | The Public-Value Consequences of Automation Are Conditional
+
+**中文**
+
+Roehl与Hansen（2024）将自动化行政决策置于问责、效率、平等、公平、韧性、回应性、隐私、法治和透明度等善治价值之间。自动化可能同时产生协同、权衡和制度边界，其后果取决于任务复杂性、自动化程度、决定的重要性、模型类型、人工复核和申诉渠道。
+
+**English**
+
+Roehl and Hansen (2024) analyze automated administrative decision-making in relation to good-governance values, including accountability, efficiency, equality, equity, resilience, responsiveness, privacy, the rule of law, and transparency. Automation may generate synergies, trade-offs, and institutional limits at the same time. Its consequences depend on task complexity, the degree of automation, the importance of the decision, the type of model, human review, and available channels of appeal.
+
+**中文**
+
+Nam与Bell（2025）的两个情境实验显示，官僚在AI采用中并不只响应效率承诺。关于少数群体可能受到不公平伤害的信息稳定降低采用支持、信任和服务质量评价，防欺诈效率信息却没有产生对称的正向影响。该结果支持公共价值权衡会进入官僚判断，但实验识别的是信息提示对态度的作用，并不能证明真实机构会以相同方式部署系统。
+
+**English**
+
+Two vignette experiments by Nam and Bell (2025) show that bureaucrats do not respond only to promises of efficiency when evaluating AI adoption. Information about possible unfair harm to minority groups consistently reduces support for adoption, trust, and evaluations of service quality, whereas information about anti-fraud efficiency does not produce a symmetrical positive effect. The findings are consistent with the view that public-value trade-offs enter bureaucratic judgment. However, the experiments identify the effects of informational cues on attitudes, not how agencies actually deploy AI systems.
+
+**中文**
+
+因此，公共部门AI的评价标准不能压缩为准确率、速度或使用率。效率只是公共价值的一部分，且必须同公平、问责、隐私、回应性与法治共同评估。
+
+**English**
+
+Public-sector AI therefore cannot be evaluated solely through accuracy, speed, or use rates. Efficiency is only one component of public value and must be assessed alongside equity, accountability, privacy, responsiveness, and the rule of law.
+
+## 三、从采用到使用 | 3. From Adoption to Use
+
+### 生成式AI研究的理论推进与证据边界 | Theoretical Advances and Evidentiary Boundaries in Generative-AI Research
+
+**中文**
+
+生成式AI文献内部包含不同层次的问题。Zhu（2025）提出公共行政“with AI、of AI、through AI”的三元范式，分别指AI作为行政工具、AI作为治理对象以及AI作为研究方法。Porumbescu、Young与Yang（2025）强调，生成式AI是否改变官僚制，不由模型能力单独决定，而取决于专业身份、监督、组织文化、透明和责任安排。两篇文章提供的是学科与治理议程，不是技术效果的经验估计。
+
+**English**
+
+The generative-AI literature contains questions at several analytical levels. Zhu (2025) proposes a tripartite paradigm of public administration with AI, of AI, and through AI, referring respectively to AI as an administrative tool, an object of governance, and a research method. Porumbescu, Young, and Yang (2025) emphasize that whether generative AI transforms bureaucracy does not depend on model capability alone, but also on professional identity, supervision, organizational culture, transparency, and arrangements for responsibility. These two articles establish disciplinary and governance agendas rather than estimating the empirical effects of the technology.
+
+**中文**
+
+Kim与Nam（2026）把研究重点从采用意愿推进到韩国公务员的自报工作使用。他们将TAM的认知评价、信任理论、依恋理论和组织情境整合为条件性信任模型。结果表明，感知重要性、对回答的信任和支持性文化与实际使用正相关；操作担忧会削弱信任与使用之间的关系，支持文化则强化该关系。不过，数据为横截面自报，无法排除使用经验反过来改变信任或组织文化评价。
+
+**English**
+
+Kim and Nam (2026) move the focus from adoption intentions to Korean public officials’ self-reported use at work. They integrate cognitive evaluations from the technology acceptance model, trust theory, attachment theory, and organizational context into a conditional-trust model. Perceived importance, trust in chatbot responses, and a supportive culture are positively associated with actual use. Operational concerns weaken the relationship between trust and use, while supportive culture strengthens it. Because the data are cross-sectional and self-reported, however, the analysis cannot rule out the possibility that prior use shapes trust or perceptions of organizational culture.
+
+**中文**
+
+Zhang、Hsieh与Liu（2025）从自动化—增强悖论、主动资源配置和社会认知理论出发，发现台湾公校教师的ChatGPT依赖与工作努力、自我效能正相关，并报告自我效能的统计中介。该研究表明生成式AI可能通过能力感影响员工反应，但同一时点自报中介不能建立时间顺序，且只调查已经使用ChatGPT的教师，无法解释采用或长期技能后果。
+
+**English**
+
+Drawing on the automation–augmentation paradox, proactive resource-allocation theory, and social cognitive theory, Zhang, Hsieh, and Liu (2025) find that ChatGPT dependence among Taiwanese public-school teachers is positively associated with work effort and self-efficacy. They also report a statistical mediation through self-efficacy. The findings suggest that generative AI may shape employee responses through perceived capability, but same-wave self-reported mediation cannot establish temporal ordering. Because the sample includes teachers who already use ChatGPT, the study also cannot explain adoption or long-term consequences for skills.
+
+**中文**
+
+Picavet等人（2026）的设计科学试点把生成式AI嵌入政府战略前瞻。LLM扩大信息扫描、聚类和情景生成，人类专家负责来源、偏差、合理性和政策意义。该项目提供可审计的人机协作流程及可行性证据，但情景数量增加并不等于情景质量、战略判断或政策结果改善。
+
+**English**
+
+Picavet et al. (2026) embed generative AI in governmental strategic foresight through a design-science pilot. Large language models expand information scanning, clustering, and scenario generation, while human experts assess sources, bias, plausibility, and policy relevance. The project provides an auditable human–machine workflow and evidence of feasibility, but generating more scenarios does not by itself demonstrate higher scenario quality, better strategic judgment, or improved policy outcomes.
+
+**中文**
+
+总体而言，生成式AI研究已从宏观范式推进到实际使用和组织应用，但“GenAI”仍不是可直接比较的单一处理。现有论文分别测量范式、态度、自报使用、心理状态和设计试点。下一步需要把正式授权、任务级日志、输出质量、主管或同事评价以及长期技能变化连接起来，才能判断什么条件下AI真正实现增强而不是替代、依赖或隐性工作转移。
+
+**English**
+
+Overall, research on generative AI has progressed from broad paradigms to actual use and organizational applications, but GenAI is not a single, directly comparable treatment. Existing studies measure paradigms, attitudes, self-reported use, psychological states, and design pilots. The next step is to connect formal authorization, task-level logs, output quality, supervisor or peer assessments, and long-term changes in skills. Such evidence is necessary to identify when AI augments work rather than producing substitution, dependence, or hidden transfers of labor.
+
+## 四、AI怎样改变官僚工作 | 4. How AI Changes Bureaucratic Work
+
+### 裁量没有消失，而是迁移和重新组合 | Discretion Does Not Disappear; It Moves and Is Recombined
+
+**中文**
+
+街头官僚理论将一线人员视为公共政策的实际制定者，因为资源不足、目标模糊和个案复杂迫使他们运用裁量。数字化与AI并没有简单结束这一过程，而是把部分裁量转移到系统层。数据字段、训练样本、目标函数、阈值、界面、异常处理和模型更新都包含制度选择。
+
+**English**
+
+Street-level bureaucracy theory treats frontline workers as de facto policymakers because limited resources, ambiguous goals, and complex cases require them to exercise discretion. Digitalization and AI do not simply end this process. Instead, they shift part of discretion to the system level. Data fields, training samples, objective functions, thresholds, interfaces, exception handling, and model updates all embody institutional choices.
+
+**中文**
+
+Vogl等人（2020）据此提出“算法官僚制”：人、模型、数据和多个组织角色共同构成决策系统。Meijer、Lorenz与Wessels（2021）借助技术实践理论说明，技术只提供行动条件，不自动决定使用方式。相近的预测警务系统可以在不同规则、专业规范和行政文化中形成“算法牢笼”或“算法同事”。Giest与Klievink（2024）则表明，AI引发的角色变化有时表现为公开替代，有时表现为组织没有承认的任务漂移；技术层面的激进变化也可能在组织中以渐进维护的方式展开。
+
+**English**
+
+Vogl et al. (2020) use this insight to develop the concept of algorithmic bureaucracy, in which people, models, data, and multiple organizational roles jointly constitute the decision system. Drawing on technology-in-practice theory, Meijer, Lorenz, and Wessels (2021) show that technology creates conditions for action without determining how it will be used. Similar predictive-policing systems can become an algorithmic cage or an algorithmic colleague under different rules, professional norms, and administrative cultures. Giest and Klievink (2024) further show that AI-related role changes may appear as explicit replacement or as task drift that the organization does not formally recognize. A technologically radical change may therefore unfold through incremental organizational maintenance.
+
+**中文**
+
+Keppeler（2024）的自然田野实验从外部候选人角度补充了这一问题。招聘信息会向候选人传递组织是否重视、公平和创新的信号，披露AI可能触发算法厌恶，人机共同判断则可能被理解为增强而非完全替代。该研究区分了部署效应与披露效应：AI可能影响真实筛选过程，公众也可能仅因得知使用AI而改变态度，两者不能混为一谈。
+
+**English**
+
+Keppeler’s (2024) natural field experiment adds the perspective of external applicants. Recruitment messages signal whether an organization is considerate, fair, and innovative. Disclosure of AI use may trigger algorithm aversion, whereas joint human–machine judgment may be interpreted as augmentation rather than complete replacement. The study distinguishes deployment effects from disclosure effects: AI may change the actual screening process, but people may also change their attitudes merely because they learn that AI is being used. These effects should not be conflated.
+
+**中文**
+
+这些研究的共同贡献是改变分析单位。公共部门AI的适当分析单位不是孤立模型，而是“数据—模型—系统设计者—管理者—专业人员—服务对象”构成的社会技术工作系统。研究应观察裁量位于何处、谁有权修正、错误如何升级、人员是否敢于质疑，以及公民能否获得解释和救济。
+
+**English**
+
+The shared contribution of these studies is to change the unit of analysis. The appropriate unit for public-sector AI is not an isolated model but a sociotechnical work system composed of data, models, system designers, managers, professionals, and service users. Research should identify where discretion is located, who has authority to make corrections, how errors are escalated, whether personnel are willing and able to challenge outputs, and whether citizens can obtain explanations and remedies.
+
+## 五、问责、隐私与合法性 | 5. Accountability, Privacy, and Legitimacy
+
+### 接受度不是权利保障的替代品 | Acceptance Is Not a Substitute for Rights Protection
+
+**中文**
+
+Busuioc（2021）将公共问责拆成信息和解释、论坛审问与判断、后果与纠正三个阶段。算法黑箱、政府与供应商之间的专业差距以及多方责任分散会分别阻塞这些环节。可解释AI最多解决信息阶段的一部分；如果监督者没有能力质疑解释，或者错误之后没有纠正、赔偿和制度修改，问责仍不完整。
+
+**English**
+
+Busuioc (2021) divides public accountability into three stages: information and explanation, questioning and judgment by an accountability forum, and consequences and correction. Algorithmic opacity, expertise gaps between governments and vendors, and fragmented responsibility can obstruct these stages in different ways. Explainable AI can address only part of the information stage. Accountability remains incomplete if overseers cannot challenge an explanation or if errors do not lead to correction, compensation, and institutional change.
+
+**中文**
+
+Henman（2020）把算法治理风险扩展为准确性与歧视、合法性与行政正义、责任与可解释性、权力与服从四个方面。一个预测准确的系统仍可能因为不允许当事人陈述例外、了解理由或提出申诉而缺乏行政正义。相反，一个可以生成解释的系统也不会因为“说得清楚”而自动变得准确、公平或合法。
+
+**English**
+
+Henman (2020) organizes the risks of algorithmic governance into four areas: accuracy and discrimination, legitimacy and administrative justice, responsibility and explainability, and power and compliance. A predictively accurate system may still lack administrative justice if affected individuals cannot present exceptional circumstances, understand the reasons for a decision, or appeal. Conversely, a system capable of producing explanations does not automatically become accurate, fair, or legitimate merely because its outputs can be described.
+
+**中文**
+
+Willems等人（2023）以隐私计算和隐私悖论解释AI公共服务中的选择。具体效用有时会压过隐私担忧，但情境中的使用意愿不等于现实的数据授权和长期使用。Miller与Keiser（2021）从代表性官僚理论出发发现，当少数族裔面对缺乏代表性的警察群体时，自动化可能因减少面对面裁量而获得更高的相对支持。这种支持不能被解释成公民普遍认为机器公平，也不能推广到所有高风险政策领域。
+
+**English**
+
+Willems et al. (2023) use privacy calculus and the privacy paradox to explain choices concerning AI-enabled public services. Concrete benefits may sometimes outweigh privacy concerns, but stated willingness to use a service in a hypothetical setting is not equivalent to actual data authorization or sustained use. Drawing on representative bureaucracy theory, Miller and Keiser (2021) find that minority respondents facing an unrepresentative police force may express relatively greater support for automation because it reduces face-to-face discretion. This finding does not mean that citizens generally regard machines as fair, nor can it be generalized to every high-risk policy domain.
+
+**中文**
+
+Radu（2021）对国家AI战略的研究进一步指出，伦理话语可以同产业促进、市场逻辑和公私责任模糊同时存在。混合治理下，政府、供应商、咨询机构和研究组织承担不同功能，制度逻辑和权力边界需要被明确分析。合法性不能只由国家发布战略、组织采用技术或公民表示愿意使用来证明，而要由模型可审计、人员可质疑、公民可申诉、责任可追踪和错误可纠正共同支持。
+
+**English**
+
+Radu’s (2021) study of national AI strategies further shows that ethical discourse may coexist with industrial promotion, market-oriented logics, and blurred public–private responsibility. Under hybrid governance, governments, vendors, consultancies, and research organizations perform different functions, making it necessary to analyze institutional logics and boundaries of power explicitly. Legitimacy cannot be demonstrated merely by the publication of a national strategy, organizational adoption, or citizens’ stated willingness to use a service. It requires auditable models, personnel who can challenge outputs, citizens who can appeal, traceable responsibility, and correctable errors.
+
+## 六、行政负担的机制扩展 | 6. Extending the Mechanisms of Administrative Burden
+
+### 资源、第三方与数字服务配置 | Resources, Third Parties, and Digital-Service Configurations
+
+**中文**
+
+Christensen等人（2020）把执行功能纳入行政负担，指出稀缺、健康问题和年龄相关认知衰退会降低公民处理复杂手续的能力，形成“越需要帮助，越难完成申请”的人力资本困境。Döring与Madsen（2022）将行政素养定义为理解制度、掌握流程、沟通和使用媒介的领域特定能力，并结合资源保存与自我决定理论，提出行政素养通过保护自主和能力资源降低压力，社会资本则是资源不足时的安全网。
+
+**English**
+
+Christensen et al. (2020) incorporate executive function into the study of administrative burden. Scarcity, health problems, and age-related cognitive decline may reduce citizens’ capacity to manage complex procedures, creating a human-capital dilemma in which those who most need assistance face the greatest difficulty completing an application. Döring and Madsen (2022) define administrative literacy as the domain-specific ability to understand institutions, navigate procedures, communicate, and use relevant media. Combining conservation-of-resources and self-determination theories, they argue that administrative literacy reduces stress by protecting resources related to autonomy and competence, while social capital provides a safety net when individual resources are insufficient.
+
+**中文**
+
+Allen与Drolc（2026）把负担推进到申请之前。潜在申请者不会完全分析复杂规则，而会用文件数量和预计时间等显眼线索形成对项目可及性的启发式判断。Barnes（2021）则把分析推进到资格获批之后：当福利可携带性有限、兑换依赖商家、房东或照护机构时，公民仍会承担新的学习、遵从和心理成本。行政负担由此不是一次申请事件，而是一条从知晓、判断、申请、审核到兑换和持续参与的完整漏斗。
+
+**English**
+
+Allen and Drolc (2026) move the analysis of burden to the period before an application begins. Potential applicants do not fully process complex rules; instead, they use salient cues such as the number of required documents and expected completion time to form heuristic judgments about program accessibility. Barnes (2021) extends the analysis beyond eligibility approval. When benefits have limited portability and redemption depends on merchants, landlords, or care providers, citizens continue to bear learning, compliance, and psychological costs. Administrative burden is therefore not a single application event but a full funnel that runs from awareness and initial judgment through application, review, redemption, and continued participation.
+
+**中文**
+
+Aoki（2025）考察一站式、主动服务、一次提交和虚实渠道等数字时代国家—公民界面。数字服务可能减少搜索、重复证明和往返，却也可能产生隐私、错误匹配、数字排斥和申诉困难。Hegemann与Ritz（2026）以技术—组织—个人框架综合数字行政负担，强调公民点击页面之前，后台架构、跨机构协作、渠道配置和数字裁量已经预结构化其体验。
+
+**English**
+
+Aoki (2025) examines digital-era citizen–state interfaces, including one-stop, proactive, and once-only services as well as combinations of virtual and physical channels. Digital services may reduce search, repeated documentation, and travel, but they may also create privacy risks, erroneous matching, digital exclusion, and barriers to appeal. Hegemann and Ritz (2026) synthesize digital administrative burden through a technology–organization–individual framework. Their analysis emphasizes that backend architecture, interagency coordination, channel configuration, and digital discretion structure citizen experience before a user ever clicks on a webpage.
+
+**中文**
+
+Yang（2026a）关于非营利第三方的研究表明，中介组织可以解释资格、准备材料和转介服务，但第三方数量不等于协调质量。正式纳入非营利组织与低保领取人数增加相关，具体服务强度和三类成本机制却没有直接测量。Yang（2026b）关于企业负担的研究则提出，反腐可能经公平、效率和可预测性降低成本，政治注意强化部分关系，数字政府却很少表现出稳定调节。该结果提醒我们，前端数字化不能替代后台协调、权力约束和组织能力。
+
+**English**
+
+Yang’s (2026a) study of nonprofit third parties shows that intermediary organizations can explain eligibility, help prepare documents, and refer citizens to services, but the number of third parties does not necessarily indicate the quality of coordination. Formal inclusion of nonprofit organizations is associated with a larger number of minimum-living-standard recipients, yet the study does not directly measure service intensity or the three types of administrative costs. Yang’s (2026b) study of burdens on businesses proposes that corruption control may reduce costs through fairness, efficiency, and predictability. Political attention strengthens some of these relationships, whereas digital government rarely exhibits a stable moderating effect. The findings caution that front-end digitalization cannot substitute for backend coordination, constraints on power, and organizational capacity.
+
+## 七、负担、公平与不平等 | 7. Burden, Equity, and Inequality
+
+### 从个体资源差异到分配政治 | From Differences in Individual Resources to Distributive Politics
+
+**中文**
+
+行政负担的不平等不只是“相同手续对弱者更难”。Bell与Meyer（2024）利用辅导员配置阈值发现，降低前线工作负荷与低收入、黑人、西语裔和原住民学生的资助获得增加相联系。该设计提供局部因果证据，但不能区分偏好型、统计型或隐性歧视机制。Martin、Delaney与Doyle（2024）从跨领域时间使用出发，显示福利、健康、债务、照护和财务管理形成累计行政劳动；健康差和财务不安全者承担更多紧迫任务，也更难投入长期规划。
+
+**English**
+
+Inequality in administrative burden is not simply a matter of the same procedure being more difficult for disadvantaged people. Using a staffing threshold for counselors, Bell and Meyer (2024) find that lower frontline workloads are associated with increased financial-aid receipt among low-income, Black, Hispanic, and Native American students. The design provides local causal evidence, although it cannot distinguish taste-based, statistical, and implicit discrimination as mechanisms. Examining time use across domains, Martin, Delaney, and Doyle (2024) show that welfare, health, debt, care, and financial management produce cumulative administrative labor. People facing poor health and financial insecurity undertake more urgent tasks and have less capacity for long-term planning.
+
+**中文**
+
+Bell等人（2021）表明，一线人员会通过政治意识形态和应得性判断解释负担。保守者更常用防欺诈、个人责任和“赚得福利”支持程序，自由派则更强调社会公平。St. John等人（2026）的高校通信审计显示，具有黑人姓名信号和犯罪记录的咨询者等待更久、收到更多正式要求，但两封邮件的措辞并不完全相同，因此不能把全部差异严格归因于种族。
+
+**English**
+
+Bell et al. (2021) show that frontline workers interpret burden through political ideology and judgments of deservingness. Conservatives more often justify procedures through fraud prevention, personal responsibility, and the idea that benefits must be earned, whereas liberals place greater emphasis on social equity. St. John et al.’s (2026) audit of higher-education communications finds that inquirers signaling a Black name and a criminal record wait longer and receive more formal requirements. Because the wording of the two inquiries is not completely identical, however, the entire difference cannot be attributed strictly to race.
+
+**中文**
+
+Herd与Moynihan（2025）把行政负担连接到女性主义国家、性别化组织、再生产正义和交叉性。行政程序不仅阻碍福利获得，还可规制生殖身体、转移照护劳动并强化身份规范。Nagtegaal等人（2026）采用用户中心设计，将学习成本拆成不知道项目存在、不清楚服务内容和不确定资格，再通过平台广告进行干预；点击增加说明信息设计影响兴趣，但不能证明后续参与或就业改善。
+
+**English**
+
+Herd and Moynihan (2025) connect administrative burden with theories of the feminist state, gendered organizations, reproductive justice, and intersectionality. Administrative procedures not only obstruct benefit access but may also regulate reproductive bodies, shift care labor, and reinforce identity norms. Nagtegaal et al. (2026) use a user-centered design that separates learning costs into lack of awareness, uncertainty about program content, and uncertainty about eligibility, and then intervene through platform advertisements. Increased clicks indicate that information design affects expressed interest, but they do not demonstrate subsequent program participation or improved employment outcomes.
+
+**中文**
+
+Benish等人（2024）的“who–what–how”类型学说明，减负可以转移或分担义务、删除或简化要求、加速决定、改善沟通并保护尊严。Shen等人（2026）则提出刚性程序虽然造成遵从成本，也可能限制前线任意裁量。不过，其横截面自报、交互和工具变量不足以证明增加复杂度会提高公平。程序一致性和程序复杂性需要被分别测量。
+
+**English**
+
+Benish et al.’s (2024) who–what–how typology shows that burden reduction may transfer or share obligations, remove or simplify requirements, accelerate decisions, improve communication, and protect dignity. Shen et al. (2026) propose that rigid procedures may create compliance costs while also limiting arbitrary frontline discretion. Their cross-sectional self-reports, interaction analysis, and instrumental-variable strategy are not sufficient to establish that greater complexity improves fairness. Procedural consistency and procedural complexity therefore need to be measured separately.
+
+**中文**
+
+Zhou与Mast（2026）从地方政府选择出发，发现减负制度更可能出现在财政状况较好、气候关注更高和白人占比较高的城市。其结果显示，减负本身是一项受能力和目标群体社会建构影响的政治选择。条例采纳和文本强度仍不能代表实际办理时间或公民体验，但这项研究把行政负担从个体层扩展到制度供给的分配政治。
+
+**English**
+
+Examining local-government choices, Zhou and Mast (2026) find that burden-reduction policies are more likely in cities with stronger fiscal conditions, greater attention to climate issues, and larger White populations. Their results suggest that burden reduction is itself a political choice shaped by capacity and the social construction of target groups. Adoption of an ordinance and the strength of its text do not directly measure actual processing time or citizen experience, but the study extends administrative-burden research from the individual level to the distributive politics of institutional provision.
+
+## 八、亚太制度桥接 | 8. An Asia-Pacific Institutional Bridge
+
+### 从战略和标准走向执行与纠错 | Moving from Strategies and Standards to Implementation and Correction
+
+**中文**
+
+Pande与Taeihagh（2023）对新加坡自主系统监管的研究把实施、能力和问责三条线连接起来。新加坡通过试验、技术参考、监管沙盒、定期审查和多方标准制定处理操作、法律、经济、社会和伦理风险，显示出较强的分析与协调能力。与此同时，自愿标准、责任分散、数据权利和社会伦理问题不能由工程标准单独解决。
+
+**English**
+
+Pande and Taeihagh’s (2023) study of autonomous-systems regulation in Singapore connects implementation, capacity, and accountability. Singapore addresses operational, legal, economic, social, and ethical risks through experimentation, technical references, regulatory sandboxes, periodic review, and multistakeholder standard setting, indicating substantial analytical and coordinative capacity. At the same time, voluntary standards, fragmented responsibility, data rights, and broader social and ethical issues cannot be resolved through engineering standards alone.
+
+**中文**
+
+该研究的重要方法论提醒是区分战略发布、标准制定、执行遵守和错误纠正。文件分析能够确认前两者的正式内容，却不能证明企业合规、监管执行或风险结果。若把新加坡作为亚太比较案例，后续应增加事故、审计、执法、供应商合同、工作人员和使用者经验，并比较不同政治—行政制度怎样分配试验权、监管权和纠错责任。
+
+**English**
+
+An important methodological lesson is to distinguish the publication of strategies, the creation of standards, compliance in implementation, and the correction of errors. Document analysis can verify the formal content of strategies and standards, but it cannot establish firm compliance, regulatory enforcement, or risk outcomes. Research using Singapore as an Asia-Pacific comparative case should incorporate incidents, audits, enforcement records, vendor contracts, and the experiences of employees and users. It should also compare how political-administrative systems allocate authority over experimentation, regulation, and error correction.
+
+## 九、综合框架 | 9. An Integrative Framework
+
+### 六个连接41篇文献的命题 | Six Propositions Connecting the 41 Studies
+
+### 命题一 | Proposition 1
+
+**中文：公共部门AI的结果由制度嵌入而非技术能力单独决定。**
+
+技术的相对优势只有在数据、预算、技能、流程、领导、监督和合法性条件具备时才能转化为公共组织结果。实施能力是动态和阶段化的，早期试点条件不能自动支持规模化和核心业务整合。
+
+**English: The outcomes of public-sector AI depend on institutional embeddedness rather than technical capability alone.**
+
+The relative advantages of a technology translate into outcomes in public organizations only when supported by data, budgets, skills, workflows, leadership, oversight, and legitimacy. Implementation capacity is dynamic and stage-specific. Conditions that support an early pilot do not automatically support scaling or integration into core operations.
+
+### 命题二 | Proposition 2
+
+**中文：自动化重新分配裁量，而不是消除裁量。**
+
+裁量从面对面个案处理迁移到问题定义、数据选择、规则编码、模型阈值、界面、例外和复核。评价AI公平性必须覆盖完整决策系统，而不是只比较算法与人类输出的一致率。
+
+**English: Automation redistributes discretion rather than eliminating it.**
+
+Discretion moves from face-to-face case handling to problem definition, data selection, rule encoding, model thresholds, interfaces, exceptions, and review. Assessments of AI fairness must therefore cover the complete decision system rather than merely comparing the agreement of algorithmic and human outputs.
+
+### 命题三 | Proposition 3
+
+**中文：行政负担是连接组织设计与公民结果的关键中介语言。**
+
+AI和数字服务可能减少内部处理成本，同时把搜索、数据提供、验证、错误纠正和申诉转移给公民或第三方。总成本、成本承担者和成本分配需要同时测量。
+
+**English: Administrative burden provides a key mediating language between organizational design and citizen outcomes.**
+
+AI and digital services may reduce internal processing costs while transferring search, data provision, verification, error correction, and appeals to citizens or third parties. Research must measure total costs, the actors who bear them, and their distribution at the same time.
+
+### 命题四 | Proposition 4
+
+**中文：技术效果受到个人、组织和网络资源共同制约。**
+
+行政素养、认知资源、数字能力、社会资本、前线工作负荷、跨部门协作和非营利中介共同决定同一制度安排的实际效果。单一平均效应会掩盖配置差异与分配后果。
+
+**English: Technological effects are jointly conditioned by individual, organizational, and network resources.**
+
+Administrative literacy, cognitive resources, digital capacity, social capital, frontline workload, interagency coordination, and nonprofit intermediaries jointly shape the effects of the same institutional arrangement. A single average effect may conceal important differences in configurations and distributive consequences.
+
+### 命题五 | Proposition 5
+
+**中文：合法性来自可解释、可质疑、可申诉和可纠正的制度过程。**
+
+公众接受、模型透明或伦理原则都不足以单独建立合法性。问责需要信息、判断和后果三个阶段，行政正义还要求当事人能够陈述、理解、挑战并获得救济。
+
+**English: Legitimacy arises from institutional processes that permit explanation, contestation, appeal, and correction.**
+
+Public acceptance, model transparency, and ethical principles are each insufficient to establish legitimacy on their own. Accountability requires information, judgment, and consequences. Administrative justice additionally requires affected individuals to present their circumstances, understand decisions, challenge them, and obtain remedies.
+
+### 命题六 | Proposition 6
+
+**中文：负担与减负都是政治和规范选择。**
+
+政策制定者与一线人员会依据效率、公平、防欺诈、应得性和目标群体形象判断哪些成本可以接受。组织能力和政治注意也影响哪些地方、项目和群体获得减负。减负不是中性技术优化，而是公共价值和资源分配。
+
+**English: Both the imposition and reduction of burden are political and normative choices.**
+
+Policymakers and frontline workers judge which costs are acceptable through considerations of efficiency, equity, fraud prevention, deservingness, and images of target groups. Organizational capacity and political attention also influence which jurisdictions, programs, and groups receive burden reduction. Deburdening is therefore not a neutral technical optimization; it is a choice about public values and resource allocation.
+
+## 十、证据基础 | 10. The Evidence Base
+
+### 10.1 相对明确的累积性认识 | Relatively Well-Established Cumulative Insights
+
+**中文**
+
+第一，组织情境和实施安排是AI后果的重要组成，而非控制变量。多案例、实践研究和实施综述在这一点上高度一致。第二，AI不会自动消除人类工作和裁量；人类持续承担训练、解释、异常处理、监督和责任。第三，行政负担具有资源与分配差异，数字化可以减少也可以重构负担。第四，公平、问责和程序权利会影响官僚和公民对AI的评价，效率信息并不总能压过公平风险。第五，前线能力和第三方支持是连接制度与公民获得的重要环节。
+
+**English**
+
+Five cumulative insights emerge relatively clearly. First, organizational context and implementation arrangements are constitutive elements of AI outcomes rather than control variables; comparative cases, practice-based studies, and implementation reviews converge on this point. Second, AI does not automatically eliminate human work or discretion. People continue to perform training, interpretation, exception handling, oversight, and responsibility. Third, administrative burden varies with resources and distribution, and digitalization may either reduce or restructure burden. Fourth, equity, accountability, and procedural rights shape how bureaucrats and citizens evaluate AI; efficiency information does not always outweigh equity risks. Fifth, frontline capacity and third-party support are important links between institutional arrangements and citizen access.
+
+### 10.2 主要证据缺口 | Major Evidentiary Gaps
+
+**中文**
+
+现有研究最缺少的不是更多一般态度调查，而是跨层、纵向和行为数据。大量研究依赖横截面自报、概念分析、案例或情境实验。它们能揭示构念、过程和近端态度，却较少同时观察正式授权、真实使用、模型质量、前线行为、公民负担和长期结果。
+
+**English**
+
+The central limitation of the existing evidence is not a shortage of general attitude surveys, but a shortage of multilevel, longitudinal, and behavioral data. Many studies rely on cross-sectional self-reports, conceptual analysis, cases, or vignette experiments. These approaches can reveal constructs, processes, and proximal attitudes, but they rarely observe formal authorization, actual use, model quality, frontline behavior, citizen burden, and long-term outcomes together.
+
+**中文**
+
+机制证据也经常弱于理论表述。统计中介未必建立时间顺序，DID中的领取人数不能直接测量三类负担，政策文本采纳不等于执行，点击或使用意愿不等于完成服务。现有研究还集中于欧美情境，韩国、中国、台湾和新加坡论文提供了重要亚太材料，但跨制度比较仍不充分。
+
+**English**
+
+Evidence about mechanisms is also frequently weaker than the theoretical claims. Statistical mediation does not necessarily establish temporal ordering. The number of benefit recipients in a difference-in-differences design does not directly measure learning, compliance, and psychological costs. Adoption of a policy text is not equivalent to implementation, and clicks or stated intentions do not demonstrate service completion. Existing work also concentrates on Europe and North America. Studies from Korea, China, Taiwan, and Singapore provide important Asia-Pacific evidence, but systematic comparison across institutional settings remains limited.
+
+### 10.3 需要谨慎处理的结论 | Conclusions That Require Caution
+
+| 中文 | English |
+|---|---|
+| 不能因公务员信任与使用正相关，就说提高信任一定会增加使用；使用经验可能反向塑造信任。 | A positive association between public officials’ trust and use does not establish that increasing trust will increase use; prior use may shape trust. |
+| 不能因ChatGPT依赖与努力正相关，就说依赖提高长期绩效或不会造成技能退化。 | A positive association between ChatGPT dependence and work effort does not show that dependence improves long-term performance or avoids skill deterioration. |
+| 不能因AI受到公众或官僚支持，就说系统公平、合法或已获得知情同意。 | Public or bureaucratic support for AI does not demonstrate that a system is fair, legitimate, or based on informed consent. |
+| 不能因数字服务更受偏好，就说实际行政负担已经下降。 | A preference for digital services does not show that actual administrative burden has declined. |
+| 不能因政策纳入第三方后领取人数增加，就说具体学习、遵从和心理成本已被识别。 | Increased benefit receipt after the inclusion of third parties does not identify the specific learning, compliance, or psychological-cost mechanisms. |
+| 不能因地方采纳减负条例，就说公民实际办理更快或更公平。 | Local adoption of a burden-reduction ordinance does not establish that citizens experience faster or more equitable service delivery. |
+
+## 十一、可向导师提出的研究议程 | 11. A Research Agenda for Discussion with the Advisor
+
+### 11.1 建立“组织实施—任务使用—公民结果”的纵向数据链 | Build a Longitudinal Data Chain from Organizational Implementation to Task Use and Citizen Outcomes
+
+**中文**
+
+最有价值的设计是以组织为起点，记录正式AI政策、培训、授权、数据和监督安排；在任务层记录员工何时使用、采纳、修正或拒绝AI；再连接处理时间、错误、工作负荷、服务质量、申诉和群体差异。这样的数据能够区分采用、使用、制度化和公共价值实现。
+
+**English**
+
+A particularly valuable design would begin with the organization and record formal AI policies, training, authorization, data arrangements, and oversight. It would then measure when employees use, accept, revise, or reject AI at the task level and link those actions to processing time, errors, workload, service quality, appeals, and differences across social groups. Such data would distinguish adoption, use, institutionalization, and the realization of public value.
+
+### 11.2 把行政负担作为AI实施的公民端结果 | Treat Administrative Burden as a Citizen-Side Outcome of AI Implementation
+
+**中文**
+
+未来研究可以围绕完整服务漏斗设计：知晓、资格判断、开始申请、提交、补件、审批、兑换、持续参与、错误纠正和申诉。对每个阶段同时测量公民时间、金钱、理解、压力、工作人员时间和后台成本，才能判断改革是在减负还是转移负担。
+
+**English**
+
+Future research can be designed around the complete service-delivery funnel: awareness, eligibility assessment, application initiation, submission, requests for additional information, approval, redemption, continued participation, error correction, and appeal. Measuring citizens’ time, money, understanding, and stress alongside employee time and backend costs at each stage would reveal whether a reform reduces burden or merely transfers it.
+
+### 11.3 对治理保障做可检验比较 | Subject Governance Safeguards to Testable Comparisons
+
+**中文**
+
+解释、人工复核、申诉、独立审计和数据最小化经常被当作规范建议，但很少接受实际效果检验。可以通过分阶段上线、随机提示或制度差异比较这些保障是否改变错误纠正、公平、信任和使用，而不是只测是否“喜欢AI”。
+
+**English**
+
+Explanation, human review, appeals, independent audits, and data minimization are frequently proposed as normative safeguards but are rarely evaluated for their actual effects. Staggered rollouts, randomized notices, or comparisons across institutional arrangements could test whether these safeguards change error correction, equity, trust, and use rather than measuring only whether people like AI.
+
+### 11.4 将能力和公平放在同一研究设计中 | Place Capacity and Equity in the Same Research Design
+
+**中文**
+
+组织能力研究通常关注项目能否运行，公平研究关注群体结果。二者需要连接：高能力可能改善准确和服务，也可能扩大监控和自动化规模；低能力可能导致项目失败，也可能使公民承担更多纠错。能力的结果方向取决于公共价值和问责安排。
+
+**English**
+
+Research on organizational capacity usually asks whether a project can operate, whereas equity research examines outcomes across social groups. These questions should be connected. High capacity may improve accuracy and service while also expanding the scale of surveillance and automation. Low capacity may cause project failure while shifting more error-correction work to citizens. The direction of capacity’s effects depends on public-value priorities and accountability arrangements.
+
+### 11.5 发展亚太比较研究 | Develop Comparative Research in the Asia-Pacific Region
+
+**中文**
+
+韩国公务员使用、中国行政负担与反腐、新加坡自主系统治理、台湾教师GenAI使用分别展现不同制度环节。后续可围绕共同结果和制度差异进行比较，而不是把国家当作背景变量。关键比较维度包括官僚层级、数字身份和数据共享、供应商关系、前线裁量、行政救济、政治问责和第三方角色。
+
+**English**
+
+Studies of Korean public officials’ AI use, administrative burden and corruption control in China, autonomous-systems governance in Singapore, and teachers’ use of generative AI in Taiwan illuminate different parts of the institutional chain. Future work can compare common outcomes and institutional differences rather than treating country as a background variable. Important dimensions include bureaucratic hierarchy, digital identity and data sharing, vendor relationships, frontline discretion, administrative remedies, political accountability, and the role of third parties.
+
+## 十二、总结 | 12. Conclusion
+
+**中文**
+
+这41篇文献最重要的共同结论不是“AI对公共部门有利”或“行政程序对公民有害”，而是技术、规则和负担的后果都具有制度性和条件性。AI通过组织能力、人机分工和官僚裁量进入公共行动；公共行动又通过国家—公民界面转化为学习、遵从和心理成本。效率、公平、问责、隐私和合法性并不会随着技术能力提高而自动共同改善，而需要由组织设计、监督、申诉和政治选择加以协调。
+
+**English**
+
+The most important shared conclusion across the 41 studies is not that AI benefits the public sector or that administrative procedures harm citizens. Rather, the consequences of technology, rules, and burdens are institutional and conditional. AI enters public action through organizational capacity, human–machine divisions of labor, and bureaucratic discretion. Public action is then translated through the citizen–state interface into learning, compliance, and psychological costs. Improvements in technical capability do not automatically produce simultaneous gains in efficiency, equity, accountability, privacy, and legitimacy. These values must be coordinated through organizational design, oversight, appeals, and political choice.
+
+**中文**
+
+公共管理研究的独特贡献正在于打开算法与最终结果之间的组织黑箱，解释谁决定、谁执行、谁承担成本、谁能够纠错，以及哪些群体得到或失去公共价值。下一阶段研究需要把概念框架和近端态度证据推进到跨层行为与制度结果，使“AI实施”与“公民获得、公平和合法性”进入同一个可检验研究设计。
+
+**English**
+
+The distinctive contribution of public management research is to open the organizational black box between algorithms and final outcomes. It explains who decides, who implements, who bears costs, who can correct errors, and which groups gain or lose public value. The next stage of research should move beyond conceptual frameworks and proximal attitudinal evidence toward multilevel behavior and institutional outcomes, bringing AI implementation, citizen access, equity, and legitimacy into the same testable research design.
+
+## 附录 | Appendix
+
+### 41篇文献在本综述中的位置 | How the 41 Studies Contribute to This Review
+
+| 文献组 / Literature group | 篇数 / Papers | 在综述中的主要作用 / Main role in the review | 入口 / Link |
+|---|---:|---|---|
+| A. 核心综述与议程 / Core reviews and agendas | 4 | 行政负担因果图、红带整合、AI实施议程、善治价值矩阵 / Causal map of administrative burden, integration with red tape, AI implementation agenda, and good-governance value matrix | [分类综述 / Category synthesis](categories/A_Core_review_agenda/SUMMARY.md) |
+| B. 生成式AI / Generative AI | 6 | 范式、公共价值、实际使用、自我效能与人机前瞻 / Paradigms, public values, actual use, self-efficacy, and human–machine foresight | [分类综述 / Category synthesis](categories/B_GenAI-specific/SUMMARY.md) |
+| C. AI实施与能力 / AI implementation and capacity | 4 | TOE阶段、边界学习、隐藏创新和组织设计 / TOE stages, boundary learning, hidden innovation, and organizational design | [分类综述 / Category synthesis](categories/C_AI_implementation_capacity/SUMMARY.md) |
+| D. AI与官僚工作 / AI and bureaucratic work | 4 | 算法官僚、技术实践、角色变化与披露/部署 / Algorithmic bureaucracy, technology in practice, role change, and disclosure/deployment | [分类综述 / Category synthesis](categories/D_AI_and_bureaucratic_work/SUMMARY.md) |
+| E. 问责与合法性 / Accountability and legitimacy | 5 | 问责、隐私、代表性、混合治理与行政正义 / Accountability, privacy, representation, hybrid governance, and administrative justice | [分类综述 / Category synthesis](categories/E_AI_accountability_legitimacy/SUMMARY.md) |
+| F. 行政负担与素养 / Administrative burden and literacy | 8 | 资源、启发式、兑换、数字界面、第三方与企业负担 / Resources, heuristics, redemption, digital interfaces, third parties, and burdens on businesses | [分类综述 / Category synthesis](categories/F_Administrative_burden_literacy/SUMMARY.md) |
+| G. 负担与不平等 / Burden and inequality | 9 | 前线能力、累计负担、性别、意识形态、减负类型与分配政治 / Frontline capacity, cumulative burden, gender, ideology, burden-reduction types, and distributive politics | [分类综述 / Category synthesis](categories/G_Burden_equity_inequality/SUMMARY.md) |
+| I. 新加坡与亚太 / Singapore and the Asia-Pacific | 1 | 监管沙盒、标准、政策能力与制度桥接 / Regulatory sandboxes, standards, policy capacity, and institutional bridging | [分类综述 / Category synthesis](categories/I_Singapore_Asia-Pacific_bridge/SUMMARY.md) |
+
+逐篇标题、DOI、Zotero键与双语笔记见[41篇总索引](CATALOG.md)。研究方法和证据边界见[研究方法与数据处理学习手册](METHODS_AND_DATA_GUIDE_CN.md)，理论构念与逐篇对应见[理论与分析框架学习手册](THEORIES_AND_ANALYTICAL_FRAMEWORKS_GUIDE_CN.md)。
+
+For article titles, DOIs, Zotero keys, and bilingual article notes, see the [full catalog of 41 papers](CATALOG.md). For methods and evidentiary boundaries, see the [methods and data guide](METHODS_AND_DATA_GUIDE_CN.md). For theoretical constructs and paper-level mappings, see the [theories and analytical frameworks guide](THEORIES_AND_ANALYTICAL_FRAMEWORKS_GUIDE_CN.md).

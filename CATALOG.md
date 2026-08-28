@@ -4,7 +4,7 @@
 
 This table links each bilingual note, DOI, and local Zotero item key. Categories follow `Independent Study-Sem1`.
 
-配套学习材料：[41篇研究方法与数据处理学习手册（中文版）](METHODS_AND_DATA_GUIDE_CN.md)。
+配套学习材料：[导师汇报版中文文献综述](ADVISOR_LITERATURE_REVIEW_CN.md)；[导师汇报版中英文对照文献综述](ADVISOR_LITERATURE_REVIEW_BILINGUAL.md)；[41篇总思维导图与综合框架](ADVISOR_VISUAL_FRAMEWORKS.md)；[中文导师汇报提纲](ADVISOR_MEETING_BRIEF_CN.md)；[中英文对照导师汇报提纲](ADVISOR_MEETING_BRIEF_BILINGUAL.md)；[41篇研究方法与数据处理学习手册（中文版）](METHODS_AND_DATA_GUIDE_CN.md)；[41篇理论与分析框架学习手册（中文版）](THEORIES_AND_ANALYTICAL_FRAMEWORKS_GUIDE_CN.md)；[41篇理论与分析框架中英文学习手册](THEORIES_AND_ANALYTICAL_FRAMEWORKS_GUIDE_BILINGUAL.md)。
 
 | # | 分类 / Category | Year | Paper | Authors | DOI | Zotero key |
 |---:|---|---:|---|---|---|---|
