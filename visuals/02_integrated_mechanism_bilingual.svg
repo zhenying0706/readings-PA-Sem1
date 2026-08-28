@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080" role="img" aria-labelledby="title desc">
+  <title id="title">公共部门AI影响公民结果的整合机制图</title>
+  <desc id="desc">展示制度价值边界、组织实施、社会技术工作系统、裁量重配、国家公民界面、行政负担和公共价值结果之间的关系。</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8FBFD"/>
+      <stop offset="1" stop-color="#F1F5F7"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#203C52" flood-opacity="0.11"/>
+    </filter>
+    <marker id="arrow2" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L13,6.5 L0,13 z" fill="#6F8797"/>
+    </marker>
+    <marker id="arrowWarm" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L13,6.5 L0,13 z" fill="#D97757"/>
+    </marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Segoe UI",Arial,sans-serif;fill:#17324D}
+      .eyebrow{font-size:20px;font-weight:500;letter-spacing:2px;fill:#60798A}
+      .title{font-size:42px;font-weight:500;fill:#153B5B}
+      .subtitle{font-size:21px;fill:#60798A}
+      .stage-no{font-size:17px;font-weight:500;fill:#FFFFFF}
+      .stage-title{font-size:25px;font-weight:500}
+      .stage-en{font-size:16px;fill:#60798A}
+      .stage-item{font-size:18px;fill:#334E62}
+      .band-title{font-size:24px;font-weight:500;fill:#FFFFFF}
+      .band-en{font-size:17px;fill:#D8E8EF}
+      .mod-title{font-size:22px;font-weight:500}
+      .mod-en{font-size:16px;fill:#657D8D}
+      .mod-item{font-size:17px;fill:#405A6C}
+      .feedback{font-size:18px;font-weight:500;fill:#B35E46}
+      .logic{font-size:20px;font-weight:500;fill:#FFFFFF}
+    </style>
+  </defs>
+
+  <rect width="1800" height="1080" fill="url(#bg2)"/>
+  <text x="80" y="66" class="eyebrow">INTEGRATED MECHANISM · FROM ORGANIZATION TO CITIZEN</text>
+  <text x="80" y="120" class="title">AI不会直接产生公共价值：它必须穿过一条实施链</text>
+  <text x="80" y="158" class="subtitle">AI does not directly produce public value; effects emerge through an implementation chain</text>
+
+  <!-- institutional band -->
+  <g filter="url(#shadow2)">
+    <rect x="80" y="205" width="1640" height="105" rx="26" fill="#153B5B"/>
+  </g>
+  <text x="120" y="248" class="band-title">制度环境与公共价值边界</text>
+  <text x="120" y="281" class="band-en">Institutional environment &amp; public-value boundaries</text>
+  <text x="690" y="254" class="logic">法律 · 政治监督 · 效率 · 公平 · 问责 · 隐私 · 法治</text>
+  <text x="690" y="284" class="band-en">Law · political oversight · efficiency · equity · accountability · privacy · rule of law</text>
+
+  <!-- feedback loop -->
+  <path d="M1640 630 C1745 630,1750 258,1680 258" fill="none" stroke="#D97757" stroke-width="4" marker-end="url(#arrowWarm)"/>
+  <text x="1645" y="454" transform="rotate(-90 1645 454)" class="feedback">政策反馈与负担容忍 · policy feedback</text>
+
+  <!-- pipeline arrows -->
+  <path d="M330 500 L372 500" stroke="#6F8797" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M610 500 L652 500" stroke="#6F8797" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M890 500 L932 500" stroke="#6F8797" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M1170 500 L1212 500" stroke="#6F8797" stroke-width="4" marker-end="url(#arrow2)"/>
+  <path d="M1450 500 L1492 500" stroke="#6F8797" stroke-width="4" marker-end="url(#arrow2)"/>
+
+  <!-- stage 1 -->
+  <g filter="url(#shadow2)">
+    <rect x="90" y="365" width="240" height="300" rx="25" fill="#FFFFFF"/>
+  </g>
+  <rect x="90" y="365" width="240" height="12" rx="6" fill="#2E6F95"/>
+  <circle cx="130" cy="410" r="23" fill="#2E6F95"/>
+  <text x="130" y="416" text-anchor="middle" class="stage-no">1</text>
+  <text x="165" y="416" class="stage-title">采用与授权</text>
+  <text x="120" y="452" class="stage-en">Adoption &amp; authorization</text>
+  <line x1="120" y1="475" x2="300" y2="475" stroke="#D8E2E8"/>
+  <text x="120" y="512" class="stage-item">是否允许使用？</text>
+  <text x="120" y="545" class="stage-item">采购了什么？</text>
+  <text x="120" y="578" class="stage-item">用于哪些任务？</text>
+  <text x="120" y="622" class="stage-en">Adoption ≠ use</text>
+
+  <!-- stage 2 -->
+  <g filter="url(#shadow2)">
+    <rect x="370" y="365" width="240" height="300" rx="25" fill="#FFFFFF"/>
+  </g>
+  <rect x="370" y="365" width="240" height="12" rx="6" fill="#3D86A3"/>
+  <circle cx="410" cy="410" r="23" fill="#3D86A3"/>
+  <text x="410" y="416" text-anchor="middle" class="stage-no">2</text>
+  <text x="445" y="416" class="stage-title">组织实施</text>
+  <text x="400" y="452" class="stage-en">Organizational implementation</text>
+  <line x1="400" y1="475" x2="580" y2="475" stroke="#D8E2E8"/>
+  <text x="400" y="512" class="stage-item">数据 · 预算 · 技能</text>
+  <text x="400" y="545" class="stage-item">领导 · 培训 · 伙伴</text>
+  <text x="400" y="578" class="stage-item">试点 → 制度化</text>
+  <text x="400" y="622" class="stage-en">Capacity is stage-specific</text>
+
+  <!-- stage 3 -->
+  <g filter="url(#shadow2)">
+    <rect x="650" y="365" width="240" height="300" rx="25" fill="#FFFFFF"/>
+  </g>
+  <rect x="650" y="365" width="240" height="12" rx="6" fill="#2A9D8F"/>
+  <circle cx="690" cy="410" r="23" fill="#2A9D8F"/>
+  <text x="690" y="416" text-anchor="middle" class="stage-no">3</text>
+  <text x="725" y="408" class="stage-title">社会技术</text>
+  <text x="725" y="438" class="stage-title">工作系统</text>
+  <text x="680" y="470" class="stage-en">Sociotechnical work system</text>
+  <line x1="680" y1="490" x2="860" y2="490" stroke="#D8E2E8"/>
+  <text x="680" y="527" class="stage-item">任务分解与人机分工</text>
+  <text x="680" y="560" class="stage-item">专业规范与组织文化</text>
+  <text x="680" y="593" class="stage-item">训练 · 监控 · 更新</text>
+  <text x="680" y="630" class="stage-en">Model + people + workflow</text>
+
+  <!-- stage 4 -->
+  <g filter="url(#shadow2)">
+    <rect x="930" y="365" width="240" height="300" rx="25" fill="#FFFFFF"/>
+  </g>
+  <rect x="930" y="365" width="240" height="12" rx="6" fill="#7662B2"/>
+  <circle cx="970" cy="410" r="23" fill="#7662B2"/>
+  <text x="970" y="416" text-anchor="middle" class="stage-no">4</text>
+  <text x="1005" y="416" class="stage-title">裁量重配</text>
+  <text x="960" y="452" class="stage-en">Redistribution of discretion</text>
+  <line x1="960" y1="475" x2="1140" y2="475" stroke="#D8E2E8"/>
+  <text x="960" y="512" class="stage-item">问题与数据选择</text>
+  <text x="960" y="545" class="stage-item">模型阈值与界面</text>
+  <text x="960" y="578" class="stage-item">采纳 · 修正 · 拒绝</text>
+  <text x="960" y="622" class="stage-en">Discretion moves; it remains</text>
+
+  <!-- stage 5 -->
+  <g filter="url(#shadow2)">
+    <rect x="1210" y="365" width="240" height="300" rx="25" fill="#FFFFFF"/>
+  </g>
+  <rect x="1210" y="365" width="240" height="12" rx="6" fill="#E9A23B"/>
+  <circle cx="1250" cy="410" r="23" fill="#E9A23B"/>
+  <text x="1250" y="416" text-anchor="middle" class="stage-no">5</text>
+  <text x="1285" y="408" class="stage-title">国家—公民</text>
+  <text x="1285" y="438" class="stage-title">界面</text>
+  <text x="1240" y="470" class="stage-en">Citizen–state interface</text>
+  <line x1="1240" y1="490" x2="1420" y2="490" stroke="#D8E2E8"/>
+  <text x="1240" y="527" class="stage-item">渠道 · 主动服务</text>
+  <text x="1240" y="560" class="stage-item">解释 · 人工复核</text>
+  <text x="1240" y="593" class="stage-item">异常 · 申诉 · 纠错</text>
+  <text x="1240" y="630" class="stage-en">Where citizens meet the state</text>
+
+  <!-- stage 6 -->
+  <g filter="url(#shadow2)">
+    <rect x="1490" y="365" width="220" height="300" rx="25" fill="#FFF7F2"/>
+  </g>
+  <rect x="1490" y="365" width="220" height="12" rx="6" fill="#E76F51"/>
+  <circle cx="1530" cy="410" r="23" fill="#E76F51"/>
+  <text x="1530" y="416" text-anchor="middle" class="stage-no">6</text>
+  <text x="1565" y="408" class="stage-title">负担与</text>
+  <text x="1565" y="438" class="stage-title">公共价值</text>
+  <text x="1520" y="470" class="stage-en">Burden &amp; public value</text>
+  <line x1="1520" y1="490" x2="1680" y2="490" stroke="#E9D8D0"/>
+  <text x="1520" y="527" class="stage-item">学习 · 遵从 · 心理</text>
+  <text x="1520" y="560" class="stage-item">服务获得 · 绩效</text>
+  <text x="1520" y="593" class="stage-item">公平 · 信任 · 合法性</text>
+  <text x="1520" y="630" class="stage-en">Who gains? Who bears costs?</text>
+
+  <!-- core takeaway -->
+  <rect x="250" y="700" width="1300" height="66" rx="20" fill="#E7EFF4"/>
+  <text x="900" y="742" text-anchor="middle" class="mod-title">核心逻辑：技术效果 = 制度边界 × 实施能力 × 裁量配置 × 公民接触过程</text>
+  <text x="900" y="766" text-anchor="middle" class="mod-en">Core logic: technology effects emerge from institutions, implementation, discretion, and citizen encounters</text>
+
+  <!-- moderators -->
+  <path d="M310 902 L310 785" stroke="#97AAB7" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow2)"/>
+  <path d="M700 902 L700 785" stroke="#97AAB7" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow2)"/>
+  <path d="M1090 902 L1090 785" stroke="#97AAB7" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow2)"/>
+  <path d="M1480 902 L1480 785" stroke="#97AAB7" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow2)"/>
+
+  <g filter="url(#shadow2)"><rect x="110" y="840" width="400" height="160" rx="22" fill="#FFFFFF"/></g>
+  <circle cx="155" cy="885" r="21" fill="#2E6F95" opacity="0.9"/>
+  <text x="190" y="891" class="mod-title">个人资源</text>
+  <text x="190" y="919" class="mod-en">Individual resources</text>
+  <text x="145" y="958" class="mod-item">认知能力 · 行政素养 · 数字能力</text>
+  <text x="145" y="985" class="mod-en">cognition · literacy · digital capacity</text>
+
+  <g filter="url(#shadow2)"><rect x="525" y="840" width="400" height="160" rx="22" fill="#FFFFFF"/></g>
+  <circle cx="570" cy="885" r="21" fill="#2A9D8F" opacity="0.9"/>
+  <text x="605" y="891" class="mod-title">组织资源</text>
+  <text x="605" y="919" class="mod-en">Organizational resources</text>
+  <text x="560" y="958" class="mod-item">工作负荷 · 培训 · 人工复核</text>
+  <text x="560" y="985" class="mod-en">workload · training · human review</text>
+
+  <g filter="url(#shadow2)"><rect x="940" y="840" width="400" height="160" rx="22" fill="#FFFFFF"/></g>
+  <circle cx="985" cy="885" r="21" fill="#7662B2" opacity="0.9"/>
+  <text x="1020" y="891" class="mod-title">网络资源</text>
+  <text x="1020" y="919" class="mod-en">Network resources</text>
+  <text x="975" y="958" class="mod-item">第三方 · 供应商 · 跨机构协作</text>
+  <text x="975" y="985" class="mod-en">third parties · vendors · coordination</text>
+
+  <g filter="url(#shadow2)"><rect x="1355" y="840" width="335" height="160" rx="22" fill="#FFFFFF"/></g>
+  <circle cx="1400" cy="885" r="21" fill="#E76F51" opacity="0.9"/>
+  <text x="1435" y="891" class="mod-title">分配政治</text>
+  <text x="1435" y="919" class="mod-en">Distributive politics</text>
+  <text x="1390" y="958" class="mod-item">应得性 · 身份 · 目标群体</text>
+  <text x="1390" y="985" class="mod-en">deservingness · identity · target groups</text>
+</svg>

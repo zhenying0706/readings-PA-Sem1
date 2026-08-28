@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">41篇公共部门AI与行政负担文献全景图</title>
+  <desc id="desc">将41篇文献重组为概念基础、AI进入组织、官僚工作与治理、公民负担与公平、亚太制度桥接五个问题模块。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF4F8"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153B5B"/>
+      <stop offset="1" stop-color="#275D7A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#17324D" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7D94A6"/>
+    </marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC","Segoe UI",Arial,sans-serif;fill:#17324D}
+      .eyebrow{font-size:20px;font-weight:500;letter-spacing:2px;fill:#547085}
+      .title{font-size:42px;font-weight:500;fill:#153B5B}
+      .subtitle{font-size:21px;fill:#5D7486}
+      .card-title{font-size:29px;font-weight:500}
+      .card-en{font-size:18px;fill:#607687}
+      .question{font-size:22px;font-weight:500}
+      .item{font-size:19px;fill:#334E62}
+      .count{font-size:22px;font-weight:500;fill:#FFFFFF}
+      .core-title{font-size:34px;font-weight:500;fill:#FFFFFF}
+      .core-en{font-size:20px;fill:#DCEAF2}
+      .core-note{font-size:21px;fill:#FFFFFF}
+      .legend{font-size:18px;fill:#5C7284}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1050" fill="url(#bg)"/>
+  <circle cx="1490" cy="-30" r="210" fill="#D9E9F2" opacity="0.55"/>
+  <circle cx="80" cy="1030" r="180" fill="#E4DFF3" opacity="0.45"/>
+
+  <text x="90" y="72" class="eyebrow">LITERATURE LANDSCAPE · 41 PAPERS</text>
+  <text x="90" y="126" class="title">公共部门AI × 行政负担：文献全景</text>
+  <text x="90" y="164" class="subtitle">Public-sector AI × Administrative burden: an integrated landscape</text>
+
+  <!-- connectors -->
+  <path d="M610 460 C540 430,520 370,490 330" fill="none" stroke="#7D94A6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M990 460 C1060 430,1080 370,1110 330" fill="none" stroke="#7D94A6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M610 600 C540 630,520 700,490 740" fill="none" stroke="#7D94A6" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M990 600 C1060 630,1080 700,1110 740" fill="none" stroke="#7D94A6" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- top left -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="220" width="460" height="260" rx="26" fill="#FFFFFF"/>
+    <rect x="90" y="220" width="12" height="260" rx="6" fill="#2E6F95"/>
+  </g>
+  <circle cx="505" cy="260" r="27" fill="#2E6F95"/>
+  <text x="505" y="268" text-anchor="middle" class="count">4</text>
+  <text x="128" y="270" class="card-title">① 概念基础与研究议程</text>
+  <text x="128" y="301" class="card-en">Conceptual foundations · A</text>
+  <text x="128" y="342" class="question">回答：我们究竟在研究什么？</text>
+  <text x="128" y="378" class="item">• 行政负担：学习／遵从／心理成本</text>
+  <text x="128" y="411" class="item">• 红带：规则的功能、政治来源与分配</text>
+  <text x="128" y="444" class="item">• 善治：效率并非唯一公共价值</text>
+
+  <!-- top right -->
+  <g filter="url(#shadow)">
+    <rect x="1050" y="220" width="460" height="260" rx="26" fill="#FFFFFF"/>
+    <rect x="1498" y="220" width="12" height="260" rx="6" fill="#2A9D8F"/>
+  </g>
+  <circle cx="1095" cy="260" r="27" fill="#2A9D8F"/>
+  <text x="1095" y="268" text-anchor="middle" class="count">10</text>
+  <text x="1140" y="270" class="card-title">② AI怎样进入公共组织</text>
+  <text x="1140" y="301" class="card-en">Adoption, use, and capacity · B+C</text>
+  <text x="1090" y="342" class="question">回答：采用何时变成真实使用？</text>
+  <text x="1090" y="378" class="item">• GenAI：态度、自报使用与人机协作</text>
+  <text x="1090" y="411" class="item">• 实施能力：数据、人员、预算与领导</text>
+  <text x="1090" y="444" class="item">• 关键区分：试点 ≠ 制度化 ≠ 规模化</text>
+
+  <!-- core -->
+  <g filter="url(#shadow)">
+    <rect x="560" y="350" width="480" height="360" rx="54" fill="url(#core)"/>
+  </g>
+  <rect x="695" y="382" width="210" height="38" rx="19" fill="#FFFFFF" opacity="0.14"/>
+  <text x="800" y="408" text-anchor="middle" class="core-en">COMMON QUESTION</text>
+  <text x="800" y="477" text-anchor="middle" class="core-title">AI进入公共部门以后</text>
+  <text x="800" y="523" text-anchor="middle" class="core-title">重新分配了什么？</text>
+  <line x1="645" y1="557" x2="955" y2="557" stroke="#BBD3DF" stroke-width="2" opacity="0.7"/>
+  <text x="800" y="603" text-anchor="middle" class="core-note">裁量 discretion</text>
+  <text x="800" y="638" text-anchor="middle" class="core-note">工作 labor</text>
+  <text x="800" y="673" text-anchor="middle" class="core-note">成本与公共价值 costs &amp; public value</text>
+
+  <!-- bottom left -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="610" width="460" height="290" rx="26" fill="#FFFFFF"/>
+    <rect x="90" y="610" width="12" height="290" rx="6" fill="#7662B2"/>
+  </g>
+  <circle cx="505" cy="650" r="27" fill="#7662B2"/>
+  <text x="505" y="658" text-anchor="middle" class="count">9</text>
+  <text x="128" y="660" class="card-title">③ 官僚工作与治理保障</text>
+  <text x="128" y="691" class="card-en">Bureaucratic work &amp; governance · D+E</text>
+  <text x="128" y="732" class="question">回答：谁决定、谁监督、谁纠错？</text>
+  <text x="128" y="768" class="item">• 裁量迁移：数据、模型、界面与复核</text>
+  <text x="128" y="801" class="item">• 问责链：解释 → 判断 → 后果</text>
+  <text x="128" y="834" class="item">• 合法性：可质疑、可申诉、可纠正</text>
+  <text x="128" y="867" class="item">• 区分：部署效应 ≠ 披露效应</text>
+
+  <!-- bottom right -->
+  <g filter="url(#shadow)">
+    <rect x="1050" y="610" width="460" height="290" rx="26" fill="#FFFFFF"/>
+    <rect x="1498" y="610" width="12" height="290" rx="6" fill="#E76F51"/>
+  </g>
+  <circle cx="1095" cy="650" r="27" fill="#E76F51"/>
+  <text x="1095" y="658" text-anchor="middle" class="count">17</text>
+  <text x="1140" y="660" class="card-title">④ 公民负担、公平与不平等</text>
+  <text x="1140" y="691" class="card-en">Citizen burden, equity &amp; inequality · F+G</text>
+  <text x="1090" y="732" class="question">回答：谁承担成本，谁获得公共价值？</text>
+  <text x="1090" y="768" class="item">• 完整漏斗：知晓 → 申请 → 兑换 → 申诉</text>
+  <text x="1090" y="801" class="item">• 资源差异：认知、素养、社会资本</text>
+  <text x="1090" y="834" class="item">• 分配政治：应得性、性别与种族</text>
+  <text x="1090" y="867" class="item">• 核心追问：减的是谁的负担？</text>
+
+  <!-- Asia bridge -->
+  <g filter="url(#shadow)">
+    <rect x="410" y="915" width="780" height="105" rx="22" fill="#FFF8E8"/>
+  </g>
+  <circle cx="455" cy="967" r="25" fill="#E9A23B"/>
+  <text x="455" y="975" text-anchor="middle" class="count">1</text>
+  <text x="495" y="950" class="question">⑤ 亚太制度桥接 · I</text>
+  <text x="495" y="978" class="card-en">新加坡：试验—标准—监管—纠错</text>
+  <text x="495" y="1004" class="card-en">Singapore: experimentation · standards · regulation · correction</text>
+
+  <text x="1280" y="1030" class="legend">4 + 10 + 9 + 17 + 1 = 41 papers</text>
+</svg>
