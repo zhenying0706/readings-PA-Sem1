@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>Four Shortlisted GenAI Research Designs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Noto+Serif+SC:wght@400;600;700&amp;family=Noto+Sans+SC:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --paper:      #EEF0EA;
+  --card:       #FBFAF5;
+  --card-line:  #DBDCD1;
+  --ink:        #181C22;
+  --ink-soft:   #4B5057;
+  --ink-faint:  #7B8189;
+
+  --slate:      #3E5068;
+  --slate-tint: #DFE6EC;
+  --amber:      #A96E2E;
+  --amber-tint: #F1E3CC;
+  --sage:       #55704F;
+  --sage-tint:  #DEE6D6;
+  --brick:      #954D46;
+  --brick-tint: #F0DBD6;
+
+  --accent:     #3E5068;
+  --link:       #2F4D6B;
+
+  --feas-high:  #55704F;
+  --feas-mid:   #A96E2E;
+  --feas-low:   #954D46;
+
+  --shadow: 0 1px 2px rgba(24,28,34,.05), 0 6px 20px -8px rgba(24,28,34,.12);
+  --radius: 3px;
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:      #14171C;
+    --card:       #1B1F26;
+    --card-line:  #2C313A;
+    --ink:        #E9E8E2;
+    --ink-soft:   #ADB3BB;
+    --ink-faint:  #7A828C;
+
+    --slate:      #8FAAC9;
+    --slate-tint: #23303F;
+    --amber:      #D9A360;
+    --amber-tint: #362A18;
+    --sage:       #9FBB93;
+    --sage-tint:  #232C20;
+    --brick:      #DA9A92;
+    --brick-tint: #351F1D;
+
+    --accent:     #8FAAC9;
+    --link:       #A9C1DD;
+
+    --feas-high:  #9FBB93;
+    --feas-mid:   #D9A360;
+    --feas-low:   #DA9A92;
+
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px -10px rgba(0,0,0,.55);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:      #14171C;
+  --card:       #1B1F26;
+  --card-line:  #2C313A;
+  --ink:        #E9E8E2;
+  --ink-soft:   #ADB3BB;
+  --ink-faint:  #7A828C;
+
+  --slate:      #8FAAC9;
+  --slate-tint: #23303F;
+  --amber:      #D9A360;
+  --amber-tint: #362A18;
+  --sage:       #9FBB93;
+  --sage-tint:  #232C20;
+  --brick:      #DA9A92;
+  --brick-tint: #351F1D;
+
+  --accent:     #8FAAC9;
+  --link:       #A9C1DD;
+
+  --feas-high:  #9FBB93;
+  --feas-mid:   #D9A360;
+  --feas-low:   #DA9A92;
+
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px -10px rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Public Sans","Noto Sans SC",-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:"Newsreader","Noto Serif SC",Georgia,serif;
+  font-weight:600;
+  line-height:1.2;
+  text-wrap:balance;
+  margin:0;
+  color:var(--ink);
+}
+p{margin:0 0 .7em; max-width:72ch;}
+p:last-child{margin-bottom:0;}
+a{color:var(--link);}
+::selection{background:var(--slate-tint); color:var(--ink);}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+.mono{ font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums; }
+.eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:.72rem; letter-spacing:.11em; text-transform:uppercase; color:var(--ink-faint); }
+
+/* bilingual paragraph pairing */
+p.zh{
+  font-family:"Noto Sans SC","Public Sans",sans-serif;
+  color:var(--ink);
+  margin-bottom:.35em;
+}
+p.en{
+  font-family:"Public Sans",sans-serif;
+  color:var(--ink-soft);
+  font-size:.93em;
+  padding-top:.35em;
+  border-top:1px dotted var(--card-line);
+}
+.field.rq p.zh{
+  font-family:"Newsreader","Noto Serif SC",serif;
+  font-style:italic;
+  font-size:1.05rem;
+  color:var(--ink);
+}
+.field.rq p.en{
+  font-family:"Newsreader",serif;
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:.95rem;
+}
+.lang-tag{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:.62rem;
+  color:var(--ink-faint);
+  letter-spacing:.06em;
+  margin-right:.4em;
+}
+
+/* ============ SHELL / LAYOUT ============ */
+.shell{ display:grid; grid-template-columns:258px minmax(0,1fr); max-width:1260px; margin:0 auto; }
+@media (max-width:900px){ .shell{grid-template-columns:1fr;} }
+
+.masthead{ grid-column:1/-1; padding:3.4rem clamp(1.25rem,4vw,3rem) 2.1rem; border-bottom:1px solid var(--card-line); }
+.masthead .eyebrow{margin-bottom:.9rem;}
+.masthead h1{ font-size:clamp(1.9rem,4vw,2.7rem); max-width:22ch; }
+.masthead .h1-zh{
+  font-family:"Noto Serif SC",serif; font-weight:700;
+  font-size:clamp(1.5rem,3.2vw,2rem); color:var(--ink); margin-top:.3rem;
+}
+.masthead .subtitle-en{
+  margin-top:.55rem; font-family:"Newsreader",serif; font-style:italic;
+  font-size:1.02rem; color:var(--ink-soft);
+}
+.masthead .meta-row{
+  display:flex; flex-wrap:wrap; gap:.45rem 1.5rem; margin-top:1.6rem;
+  font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--ink-faint);
+}
+.masthead .meta-row b{color:var(--ink-soft); font-weight:500; font-family:"Noto Sans SC","IBM Plex Mono",monospace;}
+
+.rail{
+  padding:1.8rem 1.1rem 2rem 1.5rem; position:sticky; top:0; align-self:start;
+  max-height:100vh; overflow-y:auto; border-right:1px solid var(--card-line);
+}
+.rail::-webkit-scrollbar{width:8px;}
+.rail::-webkit-scrollbar-thumb{background:var(--card-line); border-radius:8px;}
+.rail-group{margin-bottom:1.5rem;}
+.rail-group .eyebrow{padding-left:.55rem; margin-bottom:.5rem; display:block;}
+.rail a.tab{
+  display:flex; align-items:center; gap:.55rem; padding:.36rem .55rem; border-radius:var(--radius);
+  text-decoration:none; color:var(--ink-soft); border-left:2px solid transparent;
+  transition:background .12s ease,color .12s ease;
+}
+.rail a.tab:hover{background:var(--card);}
+.rail a.tab.active{ color:var(--ink); background:var(--card); border-left-color:var(--accent); }
+.rail .tab-num{ font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-faint); width:1.3em; flex:none; }
+.rail .dot{width:6px;height:6px;border-radius:50%;flex:none;}
+.rail .tab-text{flex:1; min-width:0; display:flex; flex-direction:column; line-height:1.25;}
+.rail .tab-en{font-size:.84rem; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.rail a.tab:not(.active) .tab-en{font-weight:400;}
+.rail .tab-zh{font-family:"Noto Sans SC",sans-serif; font-size:.72rem; color:var(--ink-faint); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+@media (max-width:900px){
+  .rail{ position:static; max-height:none; border-right:none; border-bottom:1px solid var(--card-line);
+    display:flex; overflow-x:auto; gap:.4rem; padding:1rem clamp(1.25rem,4vw,3rem); }
+  .rail-group{display:contents;}
+  .rail-group .eyebrow{display:none;}
+  .rail a.tab{flex:none; border-left:none; border-bottom:2px solid transparent; white-space:nowrap;}
+  .rail a.tab.active{border-bottom-color:var(--accent);}
+  .rail .tab-text{flex-direction:row; gap:.4rem;}
+}
+
+main{ padding:2.4rem clamp(1.25rem,4vw,3.2rem) 6rem; min-width:0; }
+.lede-zh{ max-width:76ch; color:var(--ink); font-size:1.02rem; font-family:"Noto Sans SC",sans-serif; }
+.lede-en{ max-width:76ch; color:var(--ink-soft); font-size:.92rem; margin-top:.5rem; padding-top:.5rem; border-top:1px dotted var(--card-line); }
+.lede-zh strong, .lede-en strong{color:var(--ink); font-weight:600;}
+section.block{ margin-top:2.6rem; scroll-margin-top:1.2rem; }
+section.block > h2{ font-size:1.42rem; margin-bottom:.15rem; }
+section.block > .h2-en{
+  font-family:"Newsreader",serif; font-style:italic; color:var(--ink-faint);
+  font-size:1rem; margin-bottom:.9rem;
+}
+section.block > h2 .num{
+  color:var(--ink-faint); font-family:"IBM Plex Mono",monospace; font-size:.9rem; font-weight:500;
+  margin-right:.6rem; vertical-align:middle;
+}
+
+/* ============ TABLES ============ */
+.table-wrap{ overflow-x:auto; border:1px solid var(--card-line); border-radius:var(--radius); background:var(--card); box-shadow:var(--shadow); }
+table{border-collapse:collapse; width:100%; font-size:.85rem;}
+thead th{
+  position:sticky; top:0; background:var(--card); text-align:left;
+  font-family:"IBM Plex Mono",monospace; font-size:.66rem; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink-faint); font-weight:500; padding:.65rem .8rem; border-bottom:1px solid var(--card-line); white-space:nowrap;
+}
+thead th .th-zh{ display:block; font-family:"Noto Sans SC",sans-serif; text-transform:none; letter-spacing:0; color:var(--ink-soft); font-size:.72rem; margin-top:.15rem; }
+tbody td{ padding:.6rem .8rem; border-bottom:1px solid var(--card-line); vertical-align:top; color:var(--ink-soft); }
+tbody tr:last-child td{border-bottom:none;}
+tbody td:first-child{ font-family:"IBM Plex Mono",monospace; color:var(--ink-faint); font-size:.78rem; }
+tbody td.strong{color:var(--ink); font-weight:600;}
+tbody td .zh{color:var(--ink); font-family:"Noto Sans SC",sans-serif;}
+tbody td .en{display:block; color:var(--ink-faint); font-size:.85em; margin-top:.1rem;}
+.best{font-weight:600; color:var(--ink);}
+
+/* ============ CHIPS ============ */
+.chip{
+  display:inline-flex; align-items:center; gap:.35rem; font-family:"IBM Plex Mono",monospace;
+  font-size:.66rem; letter-spacing:.02em; padding:.22rem .55rem; border-radius:20px; line-height:1.5; white-space:nowrap;
+}
+.chip .zh{font-family:"Noto Sans SC",sans-serif;}
+.chip .dot{width:6px;height:6px;border-radius:50%;}
+.chip.burden{ background:var(--slate-tint); color:var(--slate); }
+.chip.ageism{ background:var(--amber-tint); color:var(--amber); }
+.chip.midcareer{ background:var(--sage-tint); color:var(--sage); }
+.chip.citizen{ background:var(--brick-tint); color:var(--brick); }
+.chip.country{ background:transparent; color:var(--ink-faint); border:1px solid var(--card-line); font-family:"Noto Sans SC",sans-serif; }
+.legend{ display:flex; flex-wrap:wrap; gap:.5rem 1rem; margin:1rem 0 1.6rem; }
+
+/* ============ DESIGN CARDS ============ */
+.card{ background:var(--card); border:1px solid var(--card-line); border-radius:6px; box-shadow:var(--shadow); padding:clamp(1.3rem,2.6vw,2.1rem); }
+.card + .card{margin-top:1.6rem;}
+.card-chips{ display:flex; flex-wrap:wrap; gap:.4rem; margin:0 0 1.3rem; align-items:center; }
+.feas{ display:inline-flex; align-items:center; gap:.32rem; margin-left:auto; font-family:"Noto Sans SC",sans-serif; font-size:.72rem; color:var(--ink-faint); }
+.feas .dots{display:inline-flex; gap:2px;}
+.feas .dots span{width:6px;height:6px;border-radius:50%; background:var(--card-line);}
+.feas .dots span.on{background:var(--feas-dot,var(--sage));}
+
+.field{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:.2rem 1.1rem; padding:.85rem 0; border-top:1px solid var(--card-line); }
+.field:first-of-type{border-top:none; padding-top:0;}
+@media (max-width:640px){ .field{grid-template-columns:1fr;} }
+.field .k{
+  font-family:"IBM Plex Mono",monospace; font-size:.64rem; letter-spacing:.03em; text-transform:uppercase;
+  color:var(--ink-faint); padding-top:.15rem; line-height:1.5;
+}
+.field .k .k-zh{ display:block; font-family:"Noto Sans SC",sans-serif; text-transform:none; letter-spacing:0; font-size:.78rem; color:var(--ink-soft); font-weight:600; }
+.field .v b{color:var(--ink); font-weight:600;}
+.field .v em.cite{ font-style:normal; color:var(--ink); font-weight:600; }
+.hyp-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.65rem;}
+.hyp-list li{display:flex; gap:.6rem; flex-wrap:wrap;}
+.hyp-list .tag{ font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:600; color:var(--accent); flex:none; padding-top:.15rem; }
+.hyp-list .hv{flex:1; min-width:220px;}
+.hyp-list .zh{color:var(--ink); font-family:"Noto Sans SC",sans-serif; display:block;}
+.hyp-list .en{color:var(--ink-faint); font-size:.87em; display:block; margin-top:.1rem;}
+
+/* ---- data box ---- */
+.databox{
+  grid-column:1/-1;
+  background: color-mix(in srgb, var(--accent-c, var(--slate)) 6%, var(--card));
+  border:1px solid var(--card-line); border-left:3px solid var(--accent-c, var(--slate));
+  border-radius:var(--radius); padding:1rem 1.15rem 1.05rem; margin-top:.15rem;
+}
+.databox .databox-title{
+  font-family:"IBM Plex Mono",monospace; font-size:.66rem; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--accent-c, var(--slate)); font-weight:600; margin-bottom:.65rem; display:flex; align-items:center; gap:.4rem;
+}
+.databox .databox-title .zh{ font-family:"Noto Sans SC",sans-serif; text-transform:none; letter-spacing:0; }
+.data-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1rem 1.4rem; }
+@media (max-width:640px){.data-grid{grid-template-columns:1fr;}}
+.data-grid h5{ font-family:"Noto Sans SC",sans-serif; font-size:.78rem; font-weight:700; color:var(--ink); margin:0 0 .1rem; }
+.data-grid h5 .en{ display:block; font-family:"Public Sans",sans-serif; font-weight:600; font-size:.86em; color:var(--ink-faint); margin-top:.05rem; }
+.data-grid ul{margin:.4rem 0 0; padding-left:1.05rem; font-size:.86rem; color:var(--ink-soft);}
+.data-grid ul li{margin-bottom:.5rem;}
+.data-grid ul li:last-child{margin-bottom:0;}
+.data-grid ul li .zh{color:var(--ink); font-family:"Noto Sans SC",sans-serif; display:block;}
+.data-grid ul li .en{color:var(--ink-faint); font-size:.88em; display:block; margin-top:.08rem;}
+.data-grid .src{color:var(--ink); font-weight:600;}
+.power-note{ margin-top:.7rem; padding-top:.6rem; border-top:1px dashed var(--card-line); font-size:.82rem; color:var(--ink-faint); }
+.power-note .zh{color:var(--ink-soft); font-family:"Noto Sans SC",sans-serif; display:block;}
+.power-note .en{display:block; margin-top:.15rem;}
+.power-note b{color:var(--ink-soft);}
+.theory-name{ display:inline-block; font-weight:700; color:var(--ink); margin-right:.3rem; }
+
+/* ============ CALLOUT GRID ============ */
+.path-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1rem; }
+.path-card{ background:var(--card); border:1px solid var(--card-line); border-left:3px solid var(--accent-c,var(--slate)); border-radius:var(--radius); padding:1.1rem 1.2rem; }
+.path-card h4{ font-size:.92rem; font-family:"Noto Sans SC",sans-serif; font-weight:700; margin-bottom:.15rem; }
+.path-card .h4-en{ font-family:"Public Sans",sans-serif; font-size:.76rem; font-weight:600; color:var(--ink-faint); margin-bottom:.5rem; }
+.path-card p.zh{font-size:.88rem; color:var(--ink-soft); max-width:none; font-family:"Noto Sans SC",sans-serif;}
+.path-card p.en{font-size:.82rem; color:var(--ink-faint); max-width:none; margin-top:.4rem; padding-top:.4rem; border-top:1px dotted var(--card-line);}
+.path-card .refs{ margin-top:.6rem; font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--ink-faint); }
+
+/* ============ DISSERTATION FLOW ============ */
+.flow{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.1rem; }
+@media (max-width:760px){.flow{grid-template-columns:1fr;}}
+.flow-step{ background:var(--card); border:1px solid var(--card-line); border-radius:var(--radius); padding:1.2rem 1.3rem; }
+.flow-step .step-eyebrow{ font-family:"IBM Plex Mono",monospace; font-size:.66rem; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); }
+.flow-step h4{font-size:1rem; margin:.35rem 0 .1rem; font-family:"Noto Serif SC",serif;}
+.flow-step .h4-en{font-family:"Newsreader",serif; font-style:italic; font-size:.86rem; color:var(--ink-faint); margin-bottom:.5rem;}
+.flow-step p.zh{font-size:.86rem; color:var(--ink-soft); max-width:none; font-family:"Noto Sans SC",sans-serif;}
+.flow-step p.en{font-size:.8rem; color:var(--ink-faint); max-width:none; margin-top:.35rem; padding-top:.35rem; border-top:1px dotted var(--card-line);}
+.flow-arrow{ display:none; align-items:center; justify-content:center; color:var(--ink-faint); font-family:"IBM Plex Mono",monospace; }
+@media (min-width:761px){ .flow{grid-template-columns:1fr auto 1fr auto 1fr; align-items:stretch;} .flow-arrow{display:flex;} }
+
+footer{
+  padding:2.5rem clamp(1.25rem,4vw,3.2rem) 3.5rem; border-top:1px solid var(--card-line);
+  font-family:"IBM Plex Mono",monospace; font-size:.74rem; color:var(--ink-faint); max-width:74ch;
+}
+footer .zh{font-family:"Noto Sans SC",sans-serif; display:block; margin-bottom:.4rem; color:var(--ink-soft);}
+
+hr.sep{ border:none; border-top:1px solid var(--card-line); margin:2.6rem 0; }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <div class="masthead">
+    <div class="eyebrow">PA Independent Study — GenAI &amp; Public Service Delivery · 中英对照精选版</div>
+    <h1>Four Shortlisted Research Designs</h1>
+    <div class="h1-zh">四个博士研究候选方案</div>
+    <div class="subtitle-en">A reduced portfolio for the qualifying proposal and a three-paper dissertation</div>
+    <div class="meta-row">
+      <span><b>默认三篇 · Default package:</b> #1 + #2 + #3</span>
+      <span><b>全新加坡备选 · All-Singapore:</b> #1 + #2 + #4（需机构准入）</span>
+      <span><b>方法 · Method:</b> mixed methods + explicit identification boundaries</span>
+    </div>
+  </div>
+
+  <nav class="rail" id="rail">
+    <div class="rail-group"><span class="eyebrow">Orientation</span>
+      <a class="tab" href="#framing"><span class="tab-num">·</span><span class="tab-text"><span class="tab-en">Final decision</span><span class="tab-zh">最终筛选</span></span></a>
+      <a class="tab" href="#compare"><span class="tab-num">·</span><span class="tab-text"><span class="tab-en">Comparison</span><span class="tab-zh">可行性对比</span></span></a>
+    </div>
+    <div class="rail-group"><span class="eyebrow">Designs 四个方案</span>
+      <a class="tab" href="#d1"><span class="tab-num">01</span><span class="dot" style="background:var(--feas-high)"></span><span class="tab-text"><span class="tab-en">GenAI Screening</span><span class="tab-zh">公共部门招聘</span></span></a>
+      <a class="tab" href="#d2"><span class="tab-num">02</span><span class="dot" style="background:var(--feas-mid)"></span><span class="tab-text"><span class="tab-en">Unequal Answers?</span><span class="tab-zh">公共GenAI审计</span></span></a>
+      <a class="tab" href="#d3"><span class="tab-num">03</span><span class="dot" style="background:var(--feas-mid)"></span><span class="tab-text"><span class="tab-en">Who Bears the Risk?</span><span class="tab-zh">年龄公平与保障</span></span></a>
+      <a class="tab" href="#d4"><span class="tab-num">04</span><span class="dot" style="background:var(--feas-low)"></span><span class="tab-text"><span class="tab-en">Assistant or Substitute?</span><span class="tab-zh">职业身份威胁</span></span></a>
+    </div>
+    <div class="rail-group"><span class="eyebrow">Synthesis 综合</span>
+      <a class="tab" href="#portfolio"><span class="tab-num">·</span><span class="tab-text"><span class="tab-en">Dissertation package</span><span class="tab-zh">三篇论文组合</span></span></a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="block" id="framing">
+      <h2>最终筛选结果</h2><div class="h2-en">Final shortlist</div>
+      <p class="lede-zh">原有十个方案已收缩为四个。默认保留一个新加坡招聘实验、一个新加坡公共GenAI系统审计、一个美国公共雇员实验，以及一个需机构准入的新加坡公务员备选方案。</p>
+      <p class="lede-en">The ten-design portfolio is reduced to four: two executable Singapore studies, one remotely executable U.S. study, and one access-dependent Singapore public-officer reserve.</p>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Design<span class="th-zh">方案</span></th><th>Country<span class="th-zh">国家</span></th><th>Role<span class="th-zh">定位</span></th></tr></thead><tbody>
+        <tr><td>01</td><td class="strong"><span class="zh">GenAI筛选会劝退资深求职者吗？</span><span class="en">Would GenAI Screening Deter Experienced Applicants?</span></td><td>新加坡</td><td class="best">博资考第一篇</td></tr>
+        <tr><td>02</td><td class="strong"><span class="zh">同一政府，不同答案？</span><span class="en">One Government, Unequal Answers?</span></td><td>新加坡</td><td>系统/公民端论文</td></tr>
+        <tr><td>03</td><td class="strong"><span class="zh">风险由谁承担？</span><span class="en">Who Bears the Risk?</span></td><td>美国</td><td>可远程执行的第三篇</td></tr>
+        <tr><td>04</td><td class="strong"><span class="zh">助手还是替代者？</span><span class="en">Assistant or Substitute?</span></td><td>新加坡</td><td>机构准入后替换#3</td></tr>
+      </tbody></table></div>
+      <p class="lede-zh" style="margin-top:1rem;">原#2和#10已并入新#2的用户验证扩展；原#1、#5、#7、#8因理论或数据准入风险、识别限制或与你的方法偏好不符而删除。</p>
+    </section>
+
+    <hr class="sep">
+
+    <section class="block" id="d1">
+      <h2><span class="num">01</span>生成式AI筛选会劝退资深求职者吗？</h2>
+      <div class="h2-en">Would Generative-AI Screening Deter Experienced Applicants? Administrative Burden and Procedural Safeguards in Singapore Public Service Recruitment</div>
+      <div class="card" style="--accent-c:var(--amber)">
+        <div class="card-chips">
+          <span class="chip ageism"><span class="dot" style="background:var(--amber)"></span><span class="zh">年龄歧视</span> · Ageism</span>
+          <span class="chip midcareer"><span class="dot" style="background:var(--sage)"></span><span class="zh">职业中期专业人士</span> · Mid-career</span>
+          <span class="chip country">新加坡 · Singapore</span>
+          <span class="feas" style="--feas-dot:var(--feas-high)"><span class="dots"><span class="on"></span><span class="on"></span><span class="on"></span></span>并列最佳起手方案 · co-best first study</span>
+        </div>
+        <div class="field rq">
+          <div class="k">核心问题<span class="k-zh">Core question</span></div>
+          <div class="v">
+            <p class="zh">在新加坡以<b>岗位为基础</b>的公共服务招聘体系（Careers@Gov、招聘权下放到各部门/法定机构人事单位）中，若某一具体职位试点采用生成式AI进行简历初筛，是否会比人工筛选更显著地劝退资深/职业中后期申请人？程序保障（说明理由、人工复核、申诉渠道）的存在，是否能缓冲这种劝退效应？</p>
+            <p class="en">In Singapore's job-based public-service recruitment system (Careers@Gov; hiring authority devolved to ministry/statutory-board HR units), does piloting GenAI resume screening for a specific posting deter experienced/mid-late-career applicants more than human screening would — and can disclosed procedural safeguards (explanation, human review, appeal channel) buffer that deterrence?</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">锚定文献<span class="k-zh">Anchor literature</span></div>
+          <div class="v">
+            <p class="zh"><em class="cite">Keppeler（2024）</em>提供了披露效应实验的近乎完整模板。但本方案的情境设定已按新加坡实际招聘制度重新校准：新加坡并无中国式的统一公务员考试，PSC的直接选拔职能主要限于奖学金与政务官（Administrative Service）等精英序列，绝大多数职位通过Careers@Gov按岗位招聘、由用人单位自行把关；VITAL已试点通用AI/ML招聘工具，但尚未确认已大规模采用生成式AI简历筛选。因此本研究被明确设计为<b>前瞻性/预期性</b>研究——检验一项尚在酝酿、而非已经确立的做法，这与GenAI招聘工具在几乎所有司法辖区都处于试点阶段的现实相符。</p>
+            <p class="en"><em class="cite">Keppeler (2024)</em> is a near-complete disclosure-effect template, but the vignette is recalibrated to Singapore's actual recruitment architecture: no unified national civil-service exam; PSC's direct selection role is largely confined to scholarship/Administrative Service tracks; most postings are job-based via Careers@Gov with devolved agency-level screening; VITAL has piloted general AI/ML recruiting tools but GenAI-specific screening is not confirmed as widespread. The study is deliberately framed as <b>anticipatory</b> research on an emerging, not yet established, practice — matching the reality that GenAI hiring tools are still pilot-stage almost everywhere.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">研究空白<span class="k-zh">Research gap</span></div>
+          <div class="v">
+            <p class="zh">招聘中的算法厌恶研究一直未与年龄歧视/职业中期可雇佣性研究交叉；更少有研究检验程序保障（解释、人工复核、申诉）能否缓冲AI筛选对特定群体的劝退效应——而这恰恰是Busuioc（2021）问责框架中"解释/说明"环节在招聘场景下的直接延伸，此前未被验证。多数现有AI招聘公平性研究默认一个已经存在、边界清晰的选拔制度（如统一考试），而没有研究把GenAI筛选放进"岗位制、去中心化招聘"这种更常见的真实制度环境中检验。</p>
+            <p class="en">Algorithm-aversion-in-recruitment research has not been crossed with age-discrimination/mid-career-employability research; fewer studies test whether procedural safeguards (explanation, human review, appeal) can buffer AI-screening deterrence for a specific group — a direct, untested extension of Busuioc's (2021) "explanation/justification" accountability stage into a hiring context. Most AI-hiring-fairness studies assume a bounded, centralized selection system rather than testing GenAI screening within the decentralized, job-based recruitment architecture that is actually more common.</p>
+          </div>
+        </div>
+        <div class="field theory">
+          <div class="k">理论框架<span class="k-zh">Theoretical framework</span></div>
+          <div class="v">
+            <p class="zh"><span class="theory-name">算法厌恶理论</span>（Dietvorst、Simmons与Massey）解释GenAI披露本身的负面效应；<span class="theory-name">行政负担理论</span>（Herd &amp; Moynihan的学习成本/依从成本/心理成本类型学）解释资深申请人为何承受更高的负担感；<span class="theory-name">Busuioc（2021）问责三阶段框架</span>（信息/调查、解释/说明、判断/纠正）为程序保障操纵提供理论锚点——"说明理由+人工复核+申诉渠道"对应的正是"解释/说明"与"判断/纠正"两个阶段。因果链条：<i>GenAI筛选披露 → 算法厌恶与心理成本上升，在资深申请人身上因预期年龄偏见而被放大 → 申请意愿与完成行为下降；程序保障披露 → 通过降低感知的不可申诉性/不可解释性，部分抵消上述效应</i>。</p>
+            <p class="en"><span class="theory-name">Algorithm aversion theory</span> (Dietvorst, Simmons &amp; Massey) explains the base disclosure effect; <span class="theory-name">administrative burden theory</span> (Herd &amp; Moynihan's learning/compliance/psychological cost typology) explains why experienced applicants bear higher burden; <span class="theory-name">Busuioc's (2021) three-stage accountability framework</span> (information/investigation, explanation/justification, judgment/correction) anchors the procedural-safeguard manipulation. Causal chain: GenAI disclosure → aversion and psychological cost, amplified for experienced applicants anticipating age bias → lower application willingness/completion; safeguard disclosure → partially offsets this by lowering perceived unappealability/opacity.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">混合方法设计<span class="k-zh">Mixed-methods design</span></div>
+          <div class="v">
+            <p class="zh">单国（新加坡）情境实验，不做跨国比较。以一则贴近Careers@Gov真实版式的具体职位公告为载体（虚构机构名，明确注明为假设性试点场景，避免被误读为在描述现行政策），采用2（筛选方式：生成式AI初筛 vs. 人工初筛）×2（程序保障：披露"提供筛选理由说明+人工复核+申诉渠道" vs. 未披露/不提供）的被试间因子设计，随机分配给来自新加坡在职人口的样本；受访者的实际职业阶段（早期职业 vs. 职业中/后期，按工作年限或年龄段划分）作为测量到的调节变量而非操纵变量，进入2×2×2的分析结构。量化核心：申请意愿、（可选）模拟申请表的实际完成行为、行政负担感知量表（学习/依从/心理成本分维度）。嵌入的质性层：情境后开放式问题"你为什么会/不会申请这个职位？"，按"效率/中立框架"vs"成本转嫁/不公怀疑框架"编码，作为mixed-methods的质性成分。</p>
+            <p class="en">Single-country (Singapore) vignette experiment — no cross-national comparison. Built around a specific, realistic Careers@Gov-style job posting (fictional agency, explicitly framed as a hypothetical pilot scenario to avoid being misread as describing an actual current policy). A 2 (screening: GenAI vs. human) × 2 (procedural safeguard: explanation + human review + appeal channel disclosed vs. not) between-subjects factorial, randomized across a sample of working-age Singapore residents/PRs; respondents' actual career stage (early- vs. mid/late-career, by tenure or age band) enters as a measured moderator, yielding a 2×2×2 analytic structure. Quantitative core: application willingness, optional behavioral completion of a mock application form, and an administrative-burden scale (learning/compliance/psychological cost subscales). Embedded qualitative layer: a post-vignette open-text item ("why would/wouldn't you apply?"), coded for "efficiency/neutral" vs. "cost-shifting/unfairness" framing.</p>
+          </div>
+        </div>
+
+        <div class="databox">
+          <div class="databox-title">◆ 数据与测量 <span class="zh">Data &amp; measurement</span></div>
+          <div class="data-grid">
+            <div>
+              <h5>已有数据<span class="en">Existing data</span></h5>
+              <ul>
+                <li><span class="zh"><span class="src">Keppeler（2024）</span>已发表/存档于OSF的情境文本与结果条目——用于改编披露效应的基础措辞（落地前请核实存档情况并征得改编许可）。</span><span class="en">Keppeler (2024) published/OSF-deposited vignette wording — base for adapting the disclosure manipulation (verify and request permission).</span></li>
+                <li><span class="zh">Careers@Gov上公开的真实职位公告版式（栏目结构、用语风格），用于让虚构情境保持生态效度，而非作为数据本身。</span><span class="en">Publicly viewable Careers@Gov posting formats (section structure, wording conventions) — used only for ecological validity of the fictional vignette, not as data per se.</span></li>
+                <li><span class="zh">新加坡《公平雇佣三方准则》/《公平考量框架》、公共服务处（PSD）与VITAL的公开招聘政策说明，作为制度背景文献。</span><span class="en">Tripartite Guidelines on Fair Employment Practices, and public PSD/VITAL recruitment-policy documentation, as institutional-background context.</span></li>
+              </ul>
+            </div>
+            <div>
+              <h5>需要收集的原始数据<span class="en">Original data to collect</span></h5>
+              <ul>
+                <li><span class="zh">分层在线样本：通过Prolific/Cint等面板招募新加坡居民/PR，按职业阶段分层抽样（如工作年限&lt;10年 vs. ≥15年，或对应年龄段），确保早期与中/后期职业群体均有足够样本量。</span><span class="en">Stratified online panel: Prolific/Cint Singapore residents/PRs, stratified by career stage (e.g., &lt;10 vs. ≥15 years' tenure, or corresponding age bands) to ensure adequate cells for both early- and mid/late-career groups.</span></li>
+                <li><span class="zh">（加强项）行为化负担测量：让受试者实际填写一份模拟申请表（版式贴近Careers@Gov），记录完成时长与中途放弃率，作为"依从成本"的行为化操作指标，而不只依赖自陈量表。</span><span class="en">(enhancement) behavioral burden measure: have respondents actually complete a mock application form (Careers@Gov-style), recording completion time and drop-off as a behavioral operationalization of "compliance cost," rather than relying on self-report alone.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="power-note">
+            <span class="zh"><b>规模：</b>2×2×2设计（含测量到的调节变量），目标n≈800–1000（每格约100–125人）——为检测筛选方式×程序保障的交互效应、以及该交互是否因职业阶段而异（三阶交互）留出检验力余量；正式施测前先在约100–150人样本上做预测试，核对情境真实性与操纵检验。</span>
+            <span class="en"><b>Scale:</b> a 2×2×2 design (with career stage as a measured moderator), target n≈800–1000 total (≈100–125/cell) — powered to detect the screening×safeguard interaction and whether it varies by career stage (three-way interaction); pilot on ~100–150 first to check vignette realism and manipulation checks.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="k">研究假设<span class="k-zh">Hypotheses</span></div>
+          <div class="v">
+            <ul class="hyp-list">
+              <li><span class="tag">H1</span><span class="hv"><span class="zh">相较于人工筛选，披露生成式AI筛选会降低申请意愿与完成率，且对职业中/后期申请人的降幅大于早期职业申请人。</span><span class="en">Relative to human screening, disclosed GenAI screening reduces application willingness/completion, more so for mid/late-career than early-career applicants.</span></span></li>
+              <li><span class="tag">H2</span><span class="hv"><span class="zh">披露程序保障（说明理由+人工复核+申诉渠道）能显著缓冲H1中的负面效应，且这一缓冲作用在职业中/后期申请人身上更明显。</span><span class="en">Disclosed procedural safeguards significantly attenuate the H1 effect, with a larger buffering effect for mid/late-career applicants.</span></span></li>
+              <li><span class="tag">H3</span><span class="hv"><span class="zh">行政负担感知（尤其是心理成本分维度）在"GenAI筛选×职业阶段"对申请意愿的影响中起中介作用。</span><span class="en">Administrative-burden perceptions (especially the psychological-cost subscale) mediate the effect of GenAI screening × career stage on application willingness.</span></span></li>
+              <li><span class="tag">H4</span><span class="hv"><span class="zh">（探索性）开放式理由文本会因职业阶段与实验条件呈现系统性差异，尤以"成本转嫁"叙事在职业中/后期、无程序保障条件下的申请人中更常见。</span><span class="en">(exploratory) open-text justifications differ systematically by career stage and condition, with "cost-shifting" narratives concentrated among mid/late-career applicants in the no-safeguard condition.</span></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">学术贡献<span class="k-zh">Contribution</span></div>
+          <div class="v">
+            <p class="zh">把招聘场景下的算法厌恶研究，与行政负担理论、Busuioc问责框架首次系统连接；把辩论焦点从"考试是否公平"转移到更贴近新加坡制度现实的问题——"成本转嫁"是否会因程序保障而被抵消。作为一项前瞻性研究，其证据可直接提供给PSD/VITAL等在试点AI招聘工具的机构，在其大规模部署GenAI筛选之前，即用即弃地说明程序保障设计的必要性，而不是等到既成事实后再做事后评估。</p>
+            <p class="en">First systematic bridge between recruitment-context algorithm-aversion research, administrative burden theory, and Busuioc's accountability framework; shifts the debate from "is the exam fair" to a question that actually matches Singapore's institutional reality — whether procedural safeguards offset cost-shifting. As anticipatory research, its evidence is directly usable by PSD/VITAL and similar agencies piloting AI hiring tools, informing safeguard design before large-scale GenAI-screening deployment rather than evaluating it after the fact.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">下一步<span class="k-zh">Best next step</span></div>
+          <div class="v">
+            <p class="zh best">把Keppeler已发表的情境实验材料改写成贴近Careers@Gov版式的虚构职位公告（明确标注为假设性试点场景），加入程序保障披露操纵，并联系Prolific/Cint确认新加坡按职业阶段分层抽样的可行性，在约100–150名受访者上预测试后再正式施测。</p>
+            <p class="en">Rewrite Keppeler's published vignette materials into a fictional Careers@Gov-style posting (explicitly flagged as a hypothetical pilot), add the procedural-safeguard disclosure manipulation, confirm feasibility of career-stage-stratified sampling in Singapore via Prolific/Cint, and pilot on ~100–150 respondents before full fielding.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="d2">
+      <h2><span class="num">02</span>同一政府，不同答案？</h2>
+      <div class="h2-en">One Government, Unequal Answers? Auditing Age and Digital-Literacy Responsiveness in Singapore's Public GenAI Assistants</div>
+      <div class="card" style="--accent-c:var(--slate)">
+        <div class="card-chips">
+          <span class="chip burden"><span class="dot" style="background:var(--slate)"></span><span class="zh">行政负担</span> · Burden</span>
+          <span class="chip ageism"><span class="dot" style="background:var(--amber)"></span><span class="zh">年龄歧视</span> · Ageism</span>
+          <span class="chip citizen"><span class="dot" style="background:var(--brick)"></span><span class="zh">公民-政府关系</span> · Citizen-govt</span>
+          <span class="chip country">仅新加坡 · Singapore only</span>
+          <span class="feas" style="--feas-dot:var(--feas-mid)"><span class="dots"><span class="on"></span><span class="on"></span><span></span></span>可行性中高 · moderate-high</span>
+        </div>
+        <div class="field rq">
+          <div class="k">核心问题<span class="k-zh">Core question</span></div>
+          <div class="v">
+            <p class="zh">在新加坡共享的数字政府基础设施中，面向公众的GenAI助手能否恰当适应明确表明老年身份或数字服务困难的公民，还是会降低准确性、完整性、尊重和人工协助的可及性？这些差异多大程度来自同一系统对不同线索的回应，多大程度来自机构配置、语言、政策领域和转人工规则？</p>
+            <p class="en">Within Singapore's shared digital-government infrastructure, do public GenAI assistants adapt appropriately to older-age and digital-literacy cues, and where does unequal response quality arise?</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">锚定文献<span class="k-zh">Anchor literature</span></div>
+          <div class="v">
+            <p class="zh"><em class="cite">Bell与Meyer（2024）</em>及提案库中韩国审计设计的通信审计逻辑，为本方案提供了方法论基础，只是把审计对象从人类官员转向GenAI系统本身。<em class="cite">Aoki（2025）</em>的联合分析显示数字困难群体明确希望保留人工/混合渠道，为"是否提供转人工"这一结果变量提供依据。<em class="cite">Hegemann与Ritz（2026）</em>点出了整个问题的核心：数字负担可以在公民接触到任何一位真人之前，就已经被系统设计"预先结构化"。</p>
+            <p class="en">The correspondence-audit logic in <em class="cite">Bell &amp; Meyer (2024)</em> and the proposal bank's Korea audit design, redirected to GenAI systems. <em class="cite">Aoki (2025)</em> and <em class="cite">Hegemann &amp; Ritz (2026)</em> motivate the outcome measures.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">研究空白<span class="k-zh">Research gap</span></div>
+          <div class="v">
+            <p class="zh">现有审计实验主要检验人类官员的邮件回应，尚不清楚在共享的国家级AI基础设施下，不同机构的知识库、澄清规则、语言配置和人工升级通道是否会再造不平等的学习与纠错成本。单国设计的价值在于识别裁量权在新加坡统一数字政府内部迁移到了哪些配置环节。</p>
+            <p class="en">The single-country gap is whether shared national infrastructure still produces unequal burdens through agency configuration, language, knowledge bases, and escalation rules.</p>
+          </div>
+        </div>
+        <div class="field theory">
+          <div class="k">理论框架<span class="k-zh">Theoretical framework</span></div>
+          <div class="v">
+            <p class="zh"><span class="theory-name">屏幕层级/算法街头官僚理论</span>与行政负担的<span class="theory-name">学习与纠错成本</span>框架共同界定机制。新加坡本地化因果链条为：<i>国家级共享平台 → 机构知识库、语言、澄清与人工升级配置 → 系统对年龄和数字素养线索的适应 → 学习与纠错负担被缓解或复制</i>。因果识别来自同一系统内随机化线索；跨机构配置差异只做描述性解释。</p>
+            <p class="en"><span class="theory-name">Screen-level/algorithmic street-level bureaucracy</span> and administrative-burden theory: shared platform → agency knowledge-base, language, clarification, and escalation configuration → adaptation to randomized age/literacy cues → mitigated or reproduced learning and correction burdens.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">混合方法设计<span class="k-zh">Mixed-methods design</span></div>
+          <div class="v">
+            <p class="zh">先盘点并核实新加坡政府聊天助手是否真正使用生成式或混合AI，不将纯规则型FAQ机器人混入样本。在独立新对话中实施2×2×2匹配查询：年龄线索（老年/年轻）×数字素养线索（需要逐步帮助/行政术语娴熟）×语言（英语/华语）。量化评分准确性、完整性、可读性、具体步骤、额外追问负担、澄清质量、尊重和人工后援；质性框架分析关注共情、家长式语言、无依据推断、转介、拒答与升级。因果估计对象是同一系统内随机化线索造成的回应差异；跨系统差异仅作描述性解释。</p>
+            <p class="en">A preregistered 2×2×2 within-system audit randomizes age cue, digital-literacy cue, and English/Chinese language. Quantitative rubric scores are integrated with qualitative framework analysis.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="k">用户验证扩展<span class="k-zh">User-validation extension</span></div>
+          <div class="v">
+            <p class="zh">吸收原方案#2和#10的有效内容：系统审计完成后，可招募新加坡老年居民，对被审计界面或经选回答进行出声思考，验证清晰解释、逐步指引和人工后援是否真正降低学习与心理成本。资源允许时可扩展为任务实验；它不是核心审计的必要条件，也不再单独成篇。</p>
+            <p class="en">Former Designs 2 and 10 are consolidated here: an optional older-user think-aloud or task-validation phase tests whether explanations, stepwise guidance, and human fallback actually reduce experienced burden.</p>
+          </div>
+        </div>
+
+        <div class="databox">
+          <div class="databox-title">◆ 数据与测量 <span class="zh">Data &amp; measurement</span></div>
+          <div class="data-grid">
+            <div>
+              <h5>已有数据<span class="en">Existing data</span></h5>
+              <ul>
+                <li><span class="zh">无需现成数据集——数据集由研究者直接与真实公共系统互动生成。</span><span class="en">None required — the dataset is generated directly by the researcher interacting with live public systems.</span></li>
+                <li><span class="zh">正式设计前建立新加坡在线系统清单，从国家级数字礼宾和VICA机构助手开始，逐一核实是否真正启用GenAI/混合AI、是否公开可访问及服务条款是否允许研究性审计。</span><span class="en">Build and verify a live Singapore-only system inventory before fielding.</span></li>
+              </ul>
+            </div>
+            <div>
+              <h5>需要收集的原始数据<span class="en">Original data to collect</span></h5>
+              <ul>
+                <li><span class="zh">先在2个系统、4个与年龄无关的服务场景中预试2×2×2设计，每个条件在独立新对话中重复3次；根据预试结果和系统承载限制再确定全面审计规模。</span><span class="en">Pilot the 2×2×2 design on two systems and four age-neutral scenarios with three fresh-session replications per cell.</span></li>
+                <li><span class="zh">由两位独立编码员按评分标准打分；在全面编码前先计算评分者间信度（如Cohen's κ）。</span><span class="en">Two independent coders score each transcript; compute inter-rater reliability first.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="power-note">
+            <span class="zh"><b>规模：</b>全面规模由可验证系统数量、服务场景、随机化条件和模型输出重复次数共同决定；不能仅用一次回答代表概率性模型的稳定表现。</span>
+            <span class="en"><b>Scale:</b> determined after the system inventory and pilot; stochastic outputs require repeated fresh-session runs.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="k">研究假设<span class="k-zh">Hypotheses</span></div>
+          <div class="v">
+            <ul class="hyp-list">
+              <li><span class="tag">H1</span><span class="hv"><span class="zh">良好设计的助手应在识别数字素养困难时提供更清楚的语言、更明确的步骤和更可用的人工后援，同时不降低准确性与完整性。</span><span class="en">Low-literacy cues should trigger clearer steps and usable human fallback without loss of accuracy or completeness.</span></span></li>
+              <li><span class="tag">H2</span><span class="hv"><span class="zh">当年龄与法定资格或办事程序无关时，老年线索不应降低准确性、完整性、尊重或获得协助的机会。</span><span class="en">Age cues should not reduce response quality when age is irrelevant to eligibility or procedure.</span></span></li>
+              <li><span class="tag">H3</span><span class="hv"><span class="zh">即使共享国家级基础设施，不同语言与机构配置的基准质量及线索效应仍会存在差异。</span><span class="en">Response quality and cue effects will vary across languages and agency configurations.</span></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">可行性<span class="k-zh">Feasibility</span></div>
+          <div class="v">
+            <p class="zh">中高——无需招募受试者，但必须先确认至少一个明确的公开GenAI数字礼宾和若干可验证的VICA混合AI机构助手，核对服务条款，并控制查询量以避免干扰公共服务。系统会静默更新，因此需保留时间戳、短时间窗口内完成匹配查询，并进行至少三次独立重复。</p>
+            <p class="en">Moderate to high after a verified system inventory; terms, ethics, service burden, and silent model updates must be managed.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">下一步<span class="k-zh">Best next step</span></div>
+          <div class="v">
+            <p class="zh best">建立新加坡面向公众的GenAI系统清单，先核实系统的GenAI状态与研究访问条件；在2个系统、4个年龄中性服务场景上预试2×2×2设计，由两位独立编码员验证评分标准和评分者间信度后，再预注册全面审计。</p>
+            <p class="en">Verify the Singapore system inventory, then pilot the 2×2×2 audit before preregistration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="d3">
+      <h2><span class="num">03</span>风险由谁承担？</h2>
+      <div class="h2-en">Who Bears the Risk? Age-Equity Concerns, Procedural Safeguards, and U.S. Public Employees' Willingness to Use GenAI</div>
+      <div class="card" style="--accent-c:var(--brick)">
+        <div class="card-chips">
+          <span class="chip burden"><span class="dot" style="background:var(--slate)"></span><span class="zh">行政负担</span> · Burden</span>
+          <span class="chip ageism"><span class="dot" style="background:var(--amber)"></span><span class="zh">年龄公平</span> · Age equity</span>
+          <span class="chip country">仅美国 · U.S. only</span>
+          <span class="feas" style="--feas-dot:var(--feas-mid)"><span class="dots"><span class="on"></span><span class="on"></span><span></span></span>可远程完成 · remotely feasible</span>
+        </div>
+        <div class="field rq"><div class="k">核心问题<span class="k-zh">Core question</span></div><div class="v">
+          <p class="zh">当GenAI案件处理工具可能让老年受益人承担更高的错误与纠错负担时，这种公平风险是否降低美国公共部门雇员的部署支持？解释、人工复核、申诉和纠错保障能否恢复支持？</p>
+          <p class="en">Does age-equity risk reduce U.S. public employees' support for GenAI case processing, and can procedural safeguards restore it?</p>
+        </div></div>
+        <div class="field"><div class="k">研究空白<span class="k-zh">Research gap</span></div><div class="v">
+          <p class="zh">现有研究表明公平风险框架可以抑制官员对AI的支持，但尚未检验年龄脆弱性是否以相同方式发挥作用，也没有确立具体程序保障能否改变效率—公平权衡。</p>
+          <p class="en">The gap is not generic trust: it is whether concrete institutional safeguards change an age-equity versus efficiency trade-off.</p>
+        </div></div>
+        <div class="field theory"><div class="k">理论框架<span class="k-zh">Theoretical framework</span></div><div class="v">
+          <p class="zh">Nam与Bell的<span class="theory-name">公共价值框架</span>，结合<span class="theory-name">行政负担</span>与Busuioc的<span class="theory-name">问责阶段</span>。因果链条：<i>老年受益人风险线索 → 公平与负担担忧 → 部署支持降低；程序保障 → 可解释、可复核、可申诉与可纠错 → 支持恢复</i>。</p>
+          <p class="en">Public-values framing + administrative burden + accountability stages: equity risk → lower support; explanation, review, appeal, and correction → potential buffering.</p>
+        </div></div>
+        <div class="field"><div class="k">混合方法设计<span class="k-zh">Mixed-methods design</span></div><div class="v">
+          <p class="zh">解释性序贯QUAN→QUAL：先做5–8人认知预试，再对筛选后的美国州/地方政府服务与项目管理人员实施2×2情境实验：年龄公平风险（无/有）×程序保障（无/有）。结果包括部署建议、预算分配、案件委托比例、复核/审计需求、公平和预期行政负担。从调查样本中目的性抽取20–25人远程访谈，解释不同反应模式。</p>
+          <p class="en">Explanatory sequential QUAN→QUAL: a 2×2 vignette experiment followed by 20–25 purposively selected remote interviews.</p>
+        </div></div>
+        <div class="databox"><div class="databox-title">◆ 数据与样本 <span class="zh">Data &amp; sample</span></div><div class="data-grid"><div><h5>样本界定<span class="en">Population</span></h5><ul>
+          <li><span class="zh">美国州和地方政府中从事服务交付或项目管理的雇员。</span><span class="en">U.S. state/local public employees in service delivery or program administration.</span></li>
+          <li><span class="zh">付费两阶段职业筛选；政府层级、岗位、任期和职责一致性检查。</span><span class="en">Paid two-stage occupational screening with non-identifying consistency checks.</span></li>
+        </ul></div><div><h5>计划规模<span class="en">Planned scale</span></h5><ul>
+          <li><span class="zh">暂按450–650份调查规划，最终由预试功效分析决定。</span><span class="en">Provisional n≈450–650, finalized by pilot-based power analysis.</span></li>
+          <li><span class="zh">20–25次后续访谈；全程可在新加坡远程完成。</span><span class="en">20–25 interviews; fully executable remotely from Singapore.</span></li>
+        </ul></div></div></div>
+        <div class="field"><div class="k">证据边界<span class="k-zh">Evidence boundary</span></div><div class="v">
+          <p class="zh">随机分配可识别情境信息对陈述性资源分配和部署决定的影响，不能推断现实机构必然采用、真实服务结果或中介机制的因果效应。职业身份信息为筛选后自报，样本不代表全美公务员。</p>
+          <p class="en">Causal for randomized vignette effects on stated decisions; not actual agency adoption, service outcomes, or nationally representative estimates.</p>
+        </div></div>
+        <div class="field"><div class="k">下一步<span class="k-zh">Best next step</span></div><div class="v">
+          <p class="zh best">将Nam与Bell材料改写为一个现实的州/地方公共服务场景，预注册2×2设计与主要结果，预试筛选、操纵和访谈抽样规则。</p>
+          <p class="en">Adapt one realistic state/local service scenario, preregister, and pilot the screener, manipulations, and interview-selection rules.</p>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="block" id="d4">
+      <h2><span class="num">04</span>助手还是替代者？</h2>
+      <div class="h2-en">Assistant or Substitute? Career Stage, Professional Identity Threat, and GenAI Use in the Singapore Public Service</div>
+      <div class="card" style="--accent-c:var(--sage)">
+        <div class="card-chips">
+          <span class="chip midcareer"><span class="dot" style="background:var(--sage)"></span><span class="zh">职业中期专业人士</span> · Mid-career</span>
+          <span class="chip country">新加坡 · Singapore</span>
+          <span class="feas" style="--feas-dot:var(--feas-mid)"><span class="dots"><span class="on"></span><span class="on"></span><span></span></span>机构准入决定分级 · access sets the tier</span>
+        </div>
+        <div class="field rq">
+          <div class="k">核心问题<span class="k-zh">Core question</span></div>
+          <div class="v">
+            <p class="zh">当新加坡公共组织把GenAI定位为增强公务员专业判断的工具，或定位为提高标准化、降低人力成本的工具时，是否会影响公务员的专业身份威胁、任务委托意愿与负责任使用？这种影响是否因职业阶段、专业经验与组织岗位而不同？</p>
+            <p class="en">When Singapore public-sector organizations frame GenAI as augmenting officers' professional judgment versus as a tool for standardization and headcount reduction, does this shape professional identity threat, task delegation, and responsible use — and does the effect vary by career stage, professional experience, and organizational role?</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">锚定文献与现实背景<span class="k-zh">Anchor literature &amp; real-world backdrop</span></div>
+          <div class="v">
+            <p class="zh"><em class="cite">Kim与Nam（2026）</em>——Kim教授本人关于公务员GenAI使用的条件信任模型——依然是直接的理论锚点，并明确呼吁进行任务层级、纵向及跨国的扩展研究。与原版不同的是，这一版不再需要假设"政府未来可能大规模使用GenAI"：新加坡MDDI在2025年11月的官方答复显示，约15万名公共部门人员中已有约80%使用过政府内部GenAI工具Pair，且已推出面向全体公共人员的强制性AI素养课程。GovTech将Pair明确定位为辅助性工具（写作、研究、分析、信息总结、创建定制助手），并要求人员核查输出、对结果继续负责。这为研究提供了一个真实、大规模、正在进行中的GenAI转型场景，而不是一个虚构的未来情境——但目前官方资料只能证明"Pair已被广泛使用"，不能证明"Pair正在替代公务员做最终决定"，因此凡涉及替代、绩效监控或自动决策的表述，都必须明确写成情境实验中的假想情境，Pair本身也不写进标题，以免被误读为研究者已获得对Pair用户或其数据的正式研究权限。</p>
+            <p class="en"><em class="cite">Kim &amp; Nam (2026)</em> remains the direct theoretical anchor and explicitly calls for task-level, longitudinal, cross-country extensions. Unlike the original version, this design no longer needs to hypothesize a future large-scale GenAI rollout: Singapore's MDDI stated in a November 2025 parliamentary reply that roughly 80% of ~150,000 public-sector staff have used the government's internal GenAI tool, Pair, alongside a mandatory AI-literacy curriculum for all public officers. GovTech positions Pair explicitly as an assistive tool (writing, research, analysis, summarization, custom-assistant creation) that requires staff to check outputs and retain responsibility. This gives the study a real, large-scale, ongoing transformation to study rather than a hypothetical future one — but current public documentation only establishes that Pair is widely used, not that it is substituting for officers' final decisions, so any substitution/monitoring/automated-decision content must be framed explicitly as a hypothetical vignette condition, and Pair is deliberately kept out of the title to avoid implying confirmed research access to Pair users or its usage data.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">研究空白<span class="k-zh">Research gap</span></div>
+          <div class="v">
+            <p class="zh">语料库中没有任何文章将任期/职业阶段作为GenAI反应的理论化调节变量。更重要的是，包括Kim与Nam自己的研究在内，现有文献大多研究的是"早期/假设性采用情境"下的使用意愿，而不是官员已经身处大规模、既成事实的GenAI转型之中时，组织如何"定位"这项转型——是包装成赋能工具，还是包装成降本增效工具——如何因果地塑造身份威胁与任务委托。这正是新加坡当前处境提供的、其他司法辖区目前还给不出的实证机会。</p>
+            <p class="en">No paper treats tenure/career stage as a theoretically motivated moderator of GenAI response. More importantly, existing literature — including Kim &amp; Nam's own study — largely examines willingness to adopt in early/hypothetical contexts, not how an organization's framing of an already-real, large-scale GenAI transformation (as empowering versus as a cost/standardization tool) causally shapes identity threat and task delegation. This is exactly the empirical opportunity Singapore's current situation offers that most other jurisdictions cannot yet.</p>
+          </div>
+        </div>
+        <div class="field theory">
+          <div class="k">理论框架<span class="k-zh">Theoretical framework</span></div>
+          <div class="v">
+            <p class="zh">Kim与Nam的<span class="theory-name">条件信任模型</span>，结合<span class="theory-name">职业身份威胁理论</span>（Petriglieri 2011）与<span class="theory-name">职业阶段理论</span>（Super职业阶段模型；Ng与Feldman的职业阶段元分析），并新增两条理论线索：其一，借用<span class="theory-name">框定/损失框架机制</span>（与方案3所用Nam &amp; Bell的公共价值框定逻辑同源）解释"赋能框架 vs. 效率替代框架"操纵为何会改变身份威胁；其二，"专业控制保障"（参与设计、培训、保留最终决定权）在逻辑上呼应<span class="theory-name">Busuioc（2021）问责框架</span>中"判断/纠正"这一阶段——与方案1中程序保障的理论落点相同，使这两个方案在整套作品集里共享一条方法论主线。因果链条：<i>组织实施框架（赋能 vs. 替代）→ 身份威胁 → 任务委托意愿与负责任使用；专业控制保障 → 缓冲身份威胁，独立于框架；职业阶段/任期/岗位 → 调节上述效应的强弱</i>。</p>
+            <p class="en">Kim &amp; Nam's <span class="theory-name">conditional-trust model</span>, extended with <span class="theory-name">occupational identity threat theory</span> (Petriglieri) and <span class="theory-name">career-stage theory</span> (Super; Ng &amp; Feldman), plus two new threads: a <span class="theory-name">framing/loss-framing mechanism</span> (the same logic as Nam &amp; Bell's public-values framing used in Design #3) explaining why "empowerment vs. efficiency-substitution" framing shifts identity threat; and "professional control safeguards" mapped onto <span class="theory-name">Busuioc's (2021)</span> judgment/correction stage — the same theoretical anchor as Design #1's procedural safeguards, giving the two designs a shared methodological signature. Causal chain: organizational framing → identity threat → delegation willingness/responsible use; safeguards → buffer identity threat independent of framing; career stage/tenure/role → moderates effect size.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">混合方法设计（三阶段）<span class="k-zh">Mixed-methods design (three phases)</span></div>
+          <div class="v">
+            <p class="zh"><b>第一阶段（质性，预访谈）：</b>访谈8–12名新加坡公共部门雇员，了解他们实际把GenAI用于哪些工作、哪些任务属于专业核心、什么情况下觉得是助手/替代者、是否担心技能退化或晋升机会、是否认为使用GenAI会改变责任归属，以及他们如何理解"职业早期/中期/晚期"——用于修改问卷与情境材料，不承担主要理论检验。<b>第二阶段（量化，2×2情境实验）：</b>所有参与者阅读一个内部GenAI应用扩展情境（如撰写居民回复、总结政策材料、形成初步案件意见），随机分配到"组织实施框架"（专业赋能 vs. 效率替代）×"专业控制保障"（有保障：参与设计+培训+保留最终决定权 vs. 无保障：管理层统一设计+使用率监测+偏离AI建议需额外说明）。职业阶段/任期/岗位类型作为测量到的调节变量而非操纵变量，用于分析处理效应是否因人而异，不作因果声称。<b>第三阶段（质性，解释性访谈）：</b>从实验样本中按身份威胁高低、框架条件、采用/抵制模式做目的性抽样，选取20–25人（覆盖一线、政策分析、管理岗位），访谈解释为何同样信息产生不同反应、什么是他们认为不可替代的专业能力、保留最终决定权是否足以降低威胁、组织文化与绩效制度如何影响真实使用。</p>
+            <p class="en"><b>Phase 1 (qual, pre-interviews):</b> 8–12 Singapore public-sector employees, mapping actual GenAI use, core professional tasks, assistant-vs-substitute perceptions, skill/promotion concerns, and career-stage self-understanding — informs instrument design only. <b>Phase 2 (quant, 2×2 vignette experiment):</b> a scenario expanding internal GenAI use to resident-response drafting, policy summarization, and preliminary case opinions; randomized on organizational framing (empowerment vs. efficiency-substitution) × professional-control safeguards (present vs. absent); career stage/tenure/role enter as a measured moderator, not a manipulated one — no causal claim about career stage itself. <b>Phase 3 (qual, explanatory interviews):</b> 20–25 purposively sampled interviews across identity-threat levels, framing conditions, and adoption/resistance patterns, spanning frontline, policy-analysis, and managerial roles.</p>
+          </div>
+        </div>
+
+        <div class="databox">
+          <div class="databox-title">◆ 数据与测量 <span class="zh">Data &amp; measurement</span></div>
+          <div class="data-grid">
+            <div>
+              <h5>已有数据<span class="en">Existing data</span></h5>
+              <ul>
+                <li><span class="zh"><span class="src">Kim与Nam（2026）自己的2023年KIPA调查</span>（1,608名韩国公务员）——用作测量工具改编模板（信任、操作性担忧、支持性文化条目），而非新加坡数据本身；仍值得先与导师直接沟通能否用于工具改编或复制研究设计。</span><span class="en">Kim &amp; Nam's own 2023 KIPA survey (1,608 Korean officials) — used as an instrument-adaptation template, not as Singapore data itself; still worth asking Prof. Kim directly about reuse for instrument design.</span></li>
+                <li><span class="zh">Pair相关的公开背景文献（GovTech Pair介绍、Pair使用条款、MDDI 2025年11月国会答复）——作为制度背景与情境真实性依据，而非研究数据本身。</span><span class="en">Public Pair background documents (GovTech Pair introduction, Pair terms of use, MDDI's November 2025 parliamentary reply) — institutional-context and vignette-realism sources, not data per se.</span></li>
+              </ul>
+            </div>
+            <div>
+              <h5>需要收集的原始数据（按可行性分级）<span class="en">Original data to collect (by feasibility tier)</span></h5>
+              <ul>
+                <li><span class="zh"><b>最佳版本：</b>与两个以上机构（如GovTech、PSD、公共服务学院CSC或某部委/法定机构）达成正式合作，n≈400–600，情境实验+匿名使用日志（是否启用、使用频率/持续性、功能范围、培训前后变化，不含工作内容本身）+访谈——依赖正式合作，暂不能假定可实现。</span><span class="en"><b>Best tier:</b> formal partnership with 2+ agencies (e.g. GovTech, PSD, Civil Service College, or a ministry/statutory board), n≈400–600, experiment + anonymized usage logs (opt-in status, frequency/persistence, feature range, pre/post-training change — no work content) + interviews. Depends on formal partnership; not assumed achievable now.</span></li>
+                <li><span class="zh"><b>可完成版本：</b>与一个较大部委或法定机构合作，n≈250–400，情境实验+访谈——可形成论文，但外部效度有限。</span><span class="en"><b>Workable tier:</b> partnership with one larger ministry/statutory board, n≈250–400, survey experiment + interviews — publishable, but limited external validity.</span></li>
+                <li><span class="zh"><b>备用版本：</b>商业面板（如Prolific/Cint）筛选的新加坡公共部门雇员，n≈150–250，适合作为试点，不宜宣称代表新加坡公共服务整体；严格界定"新加坡公务员/法定机构人员"范围，不与教师、医院员工、国企员工、政府承包商及一般私营部门人员混samples。</span><span class="en"><b>Fallback tier:</b> commercial-panel-screened (Prolific/Cint) Singapore public-sector employees, n≈150–250 — suitable as a pilot, not representative of the Singapore public service; strictly define "Singapore public officer," excluding teachers, hospital staff, SOE employees, government contractors, and general private-sector respondents.</span></li>
+                <li><span class="zh"><b>理想加强版（需正式合作，暂不能假定可行）：</b>随机发送不同的培训/实施信息 → 观察6–8周真实使用日志 → 后续问卷 → 目的性访谈——把研究对象从"使用意愿"升级为"真实使用行为"。</span><span class="en"><b>Ideal enhancement (requires formal partnership; not assumed achievable):</b> randomized training/implementation messaging → 6–8 weeks of real usage-log observation → follow-up survey → purposive interviews — upgrades the outcome from stated willingness to actual use behavior.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="power-note">
+            <span class="zh"><b>决策规则：</b>先用2–4周确认能否接触至少一个机构、大致能招募多少人。若能接触250人以上并进行后续访谈，按"新加坡方案4"全力推进；若准入无法在此窗口内确认，则保留完整设计，把博资考第一篇放在方案1，方案4转为试点或论文第二篇。</span>
+            <span class="en"><b>Decision rule:</b> spend 2–4 weeks confirming access to at least one agency and roughly how many respondents are reachable. If 250+ with follow-up interview access, proceed with Design #4 as a primary paper; if access cannot be confirmed in that window, keep the design on file, lead with Design #1 as the first qualifying paper, and treat Design #4 as a pilot or second paper.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="k">伦理与敏感性保障<span class="k-zh">Ethical &amp; sensitivity safeguards</span></div>
+          <div class="v">
+            <p class="zh">新加坡公共部门雇员可能担心真实意见影响工作，身份威胁与抵制行为很容易被严重低报，因此研究设计必须做到：不通过直属主管收集答卷；不要求提供机构邮箱作为研究数据；不询问机密项目、真实案件或内部文件；不收集真实Pair聊天内容；不向机构报告样本量很小的岗位或部门结果；访谈引用完全匿名；并向受访者明确说明研究结果不会交给主管作个人绩效评价依据。</p>
+            <p class="en">Singapore public-sector employees may worry that honest answers could affect their standing at work, so identity threat and resistance are easily underreported unless the design explicitly: avoids routing responses through direct supervisors; does not require an institutional email as research data; asks nothing about classified projects, real cases, or internal documents; collects no actual Pair chat content; never reports results for units/roles with very small cell sizes back to the agency; keeps interview quotes fully anonymized; and states plainly to respondents that results will not feed into individual performance review.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="k">研究假设<span class="k-zh">Hypotheses</span></div>
+          <div class="v">
+            <ul class="hyp-list">
+              <li><span class="tag">H1</span><span class="hv"><span class="zh">相较于专业赋能框架，效率替代框架会引发更高的专业身份威胁。</span><span class="en">The efficiency-substitution framing elicits higher professional identity threat than the professional-empowerment framing.</span></span></li>
+              <li><span class="tag">H2</span><span class="hv"><span class="zh">专业控制保障（保留最终决定权、可否决AI建议）能缓冲身份威胁、提升任务委托意愿与负责任使用，且这一效应独立于框架条件。</span><span class="en">Professional-control safeguards (retained final decision, ability to override) attenuate identity threat and increase delegation willingness/responsible use, independent of framing.</span></span></li>
+              <li><span class="tag">H3</span><span class="hv"><span class="zh">框架效应与保障效应的强弱因职业阶段/任期而异，职业中期公务员表现出最大的框架驱动波动与最大的保障缓冲效应。</span><span class="en">Framing and safeguard effects vary by career stage/tenure, with mid-career officers showing the largest framing-driven swing and the largest safeguard-driven buffering.</span></span></li>
+              <li><span class="tag">H4</span><span class="hv"><span class="zh">（探索性/质性）解释性访谈揭示：为何同样的信息条件会在不同受访者身上产生不同反应，什么是他们认为不可替代的专业能力，保留最终决定权是否足以降低威胁，以及组织文化、主管与绩效制度如何塑造真实使用。</span><span class="en">(exploratory/qual) explanatory interviews reveal why the same condition produces divergent reactions, what expertise officers see as irreplaceable, whether retained final-decision authority suffices to lower threat, and how culture/supervisors/performance systems shape real use.</span></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">学术贡献<span class="k-zh">Contribution</span></div>
+          <div class="v">
+            <p class="zh">是四个保留方案中唯一能把理论嵌入一个真实、大规模、正在进行中的GenAI转型（而非假想未来情境）的设计；沿着Kim与Nam（2026）自己呼吁的方向做出任务层级扩展；证明"如何实施GenAI"（框架+保障）而非"是否存在GenAI"才是身份威胁与任务委托的因果驱动因素，可直接用于GovTech/PSD/CSC的培训与保障政策设计；与方案1共享同一套问责/程序保障理论落点，为论文集提供一条连贯的方法论主线。</p>
+            <p class="en">The only design in this set that embeds theory in a real, large-scale, ongoing GenAI transformation rather than a hypothetical future scenario; extends Kim &amp; Nam (2026) exactly along the task-level direction they call for; shows that how GenAI is implemented (framing + safeguards), not merely whether it exists, causally drives identity threat and delegation — directly usable for GovTech/PSD/CSC training and safeguard design; shares a theoretical anchor with Design #1, giving the portfolio a coherent methodological throughline.</p>
+          </div>
+        </div>
+        <div class="field">
+          <div class="k">下一步<span class="k-zh">Best next step</span></div>
+          <div class="v">
+            <p class="zh best">起草第一阶段预访谈提纲（8–12人），用2–4周确认至少一个机构联系人与大致可招募人数，按决策规则判断是把方案4作为主要论文推进，还是暂列为试点/论文第二篇；同步起草情境实验材料（框架×保障操纵）与身份威胁/任务委托量表条目。</p>
+            <p class="en">Draft the Phase 1 pre-interview protocol (8–12 respondents), spend 2–4 weeks confirming at least one agency contact and rough recruitable headcount, and apply the decision rule to choose between fielding Design #4 as a primary paper or parking it as a pilot/second paper; in parallel, draft the vignette materials (framing × safeguard manipulation) and the identity-threat/delegation scale items.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="block" id="compare">
+      <h2>四个方案对比</h2><div class="h2-en">Shortlist comparison</div>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Access<span class="th-zh">准入</span></th><th>Identification<span class="th-zh">识别</span></th><th>Effort<span class="th-zh">投入</span></th><th>Decision<span class="th-zh">建议</span></th></tr></thead><tbody>
+        <tr><td>01</td><td>低：新加坡在线面板</td><td>随机筛选/保障；职业阶段是测量异质性</td><td>中；快—中</td><td class="best">最佳第一篇</td></tr>
+        <tr><td>02</td><td>低：核验系统后无需招募</td><td>系统内线索随机化；跨系统只描述</td><td>中；快—中</td><td>保留</td></tr>
+        <tr><td>03</td><td>中：美国公共雇员两阶段筛选</td><td>风险/保障随机化；非概率样本</td><td>中；一学期</td><td>保留</td></tr>
+        <tr><td>04</td><td>高：需新加坡公共机构</td><td>实施框架/保障随机化；职业阶段不是因果处理</td><td>中高；慢</td><td>条件保留</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="block" id="portfolio">
+      <h2>三篇论文组合</h2><div class="h2-en">Three-paper dissertation package</div>
+      <div class="flow">
+        <div class="flow-step" style="--accent-c:var(--amber); border-top:3px solid var(--amber)"><div class="step-eyebrow">论文一 · Paper 1</div><h4>公共部门招聘入口</h4><div class="h4-en">Entry into public employment</div><p class="zh">#1：GenAI筛选、资深申请者与程序保障。</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="--accent-c:var(--slate); border-top:3px solid var(--slate)"><div class="step-eyebrow">论文二 · Paper 2</div><h4>公民面对的GenAI系统</h4><div class="h4-en">Citizen-facing GenAI systems</div><p class="zh">#2：年龄、数字素养、语言与人工后援。</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" style="--accent-c:var(--brick); border-top:3px solid var(--brick)"><div class="step-eyebrow">论文三 · Paper 3</div><h4>公务员的部署决策</h4><div class="h4-en">Public employees' deployment decisions</div><p class="zh">默认#3（美国）；如新加坡机构准入成功，则用#4替换。</p></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer><span class="zh">由41篇文献阅读库支撑的四个精选候选方案。旧十方案组合已被取代；完整文字版位于 <span class="mono">04_GenAI_Advisor_Kim_Four_Shortlisted_Designs.md</span>。</span>Four shortlisted designs grounded in the 41-paper reading library.</footer>
+
+<script>
+(function(){
+  var links=Array.prototype.slice.call(document.querySelectorAll('.rail a.tab'));
+  var sections=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  if(!sections.length)return;
+  function setActive(id){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id);});}
+  var io=new IntersectionObserver(function(entries){var visible=entries.filter(function(e){return e.isIntersecting;});if(visible.length){visible.sort(function(a,b){return a.boundingClientRect.top-b.boundingClientRect.top;});setActive(visible[0].target.id);}}, {rootMargin:'-10% 0px -70% 0px',threshold:[0,1]});
+  sections.forEach(function(s){io.observe(s);});setActive(sections[0].id);
+})();
+</script>
+</body>
+</html>
